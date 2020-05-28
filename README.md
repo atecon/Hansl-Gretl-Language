@@ -4,7 +4,7 @@ Sublime support for Gretl's scripting language called *Hansl*.
 
 Package's features are:
 * Syntax-highlighting
-* Auto-completion
+* Completions
 * Snippets
 * Gretl build-systems (Batch mode, CLI, REPL)
 
@@ -41,7 +41,7 @@ The new syntax will improve the way your Gretl/ Hansl code is coloured:
 **Note:** There are still some edgy cases left for improvement.
 
 
-### Auto-completion
+### Completions
 
 This feature is automatically activated for every ```*.inp``` file. Start typing a gretl command, function name or name of an accessors and you will see some suggestions which can be accepted via the Tab key.
 
