@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+gnuplot ${1:columns} --matrix=${2:matrix} --with-lines --time-series \
+	--output="${3:output} \
+	{ set title \"${4:title}\", \
+	  set xlabel \"${5:xlabel}\", \
+	  set ylabel \"${6:ylabel}\"; }
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>gnuplot</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+	<!-- Optional: Description to show in the menu -->
+    <description>gretl - plot - gnu-matrix</description>
+</snippet>
