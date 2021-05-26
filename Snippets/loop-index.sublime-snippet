@@ -1,13 +1,13 @@
 <snippet>
 	<content><![CDATA[
-
-${1:variable} = (${2:condition}) ? ${3:then} : ${4:else}
-
+loop ${1:idx}=${2:start}..${3:end}
+	${4:body}
+endloop
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>if</tabTrigger>
+	<tabTrigger>loop-index</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.gretl</scope> -->
 	<!-- Optional: Description to show in the menu -->
-    <description>gretl - create - ternary</description>
+    <description>gretl - loop - index</description>
 </snippet>

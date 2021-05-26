@@ -67,6 +67,7 @@
                "include",
                "info",
                "intreg",
+               "johansen",
                "join",
                "kpss",
                "labels",
@@ -147,7 +148,7 @@
                "xcorrgm",
                "xtabm",
 
-               // Gretl accessors -- unfortunately '$' does not work
+               // Gretl accessors
                 "ahat",
                 "aic",
                 "bic",
@@ -230,29 +231,28 @@
                 "ylist",
 
                 // data types and keywords
-                "const",
-                "display",
-                "for",
-                "foreach",
-                "output",
-                "options",
-                "while",
-                "return",
-                "quiet",
-                "silent",
                 "bool",
-                "scalar",
-                "string",
-                "int",
-                "void",
-                "matrix",
-                "matrices",
-                "void",
-                "strings",
                 "bundle",
                 "bundles",
+                "const",
+                "display",
+                "end",
+                "for",
+                "foreach",
+                "int",
+                "list",
+                "matrices",
+                "matrix",
+                "output",
+                "options",
+                "quiet",
+                "return",
+                "scalar",
                 "series",
-                "list"
-
+                "silent",
+                "string",
+                "strings",
+                "void",
+                "while"
         ]
 }

@@ -6,7 +6,7 @@ function ${1:type} ${2:name} (${3:args})
 
 	${7:code}
 
-	return ${8: variable}
+	return ${8:variable}
 end function
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

@@ -1,25 +1,25 @@
 <snippet>
 	<content><![CDATA[
-function void test_${1:name} (${2:args})
-	print "Start testing ${3:function name}()"
+function void test_${1:name} (const bundles P, ${2:args})
+	print "Start testing ${3:function name}()."
 
-	# Given
-	${4:given}
+	loop foreach i P
+		# Given
+		${4:given}
 
+		# When
+		${5:when}
 
-	# When
-	${5:when}
-
-
-	# Then
-	${6:then}
+		# Then
+		${6:then}
+	endloop
 end function
-test_${1:name}(${2:args})
+test_${1:name}(Params, ${2:args})
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>function</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.inp</scope> -->
 	<!-- Optional: Description to show in the menu -->
-    <description>gretl - create - function_test</description>
+    <description>gretl - create - function_test_table</description>
 </snippet>

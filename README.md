@@ -1,5 +1,5 @@
-# Hansl-Gretl-Language
-Sublime support for Gretl's scripting language called *Hansl*. The package's features are:
+# Hansl-gretl-Language
+Sublime support for gretl's scripting language called *Hansl*. The package's features are:
 
 * Syntax-highlighting
 
@@ -7,24 +7,24 @@ Sublime support for Gretl's scripting language called *Hansl*. The package's fea
 
 * Snippets
 
-* Gretl build-systems (Batch mode, CLI, REPL)
+* gretl build-systems (Batch mode, CLI, REPL)
 
-Gretl is an open-source statistics and econometrics software: http://gretl.sourceforge.net/
+gretl is an open-source statistics and econometrics software: http://gretl.sourceforge.net/
 
 Hansl is a recursive acronym: it stands for "Hansl’s A Neat Scripting Language". For a primer on Hansl:
 https://sourceforge.net/projects/gretl/files/manual/hansl-primer-a4.pdf/download
 
 
 ## I - Installation
-This plug-in is available on [package control](https://packagecontrol.io/packages/Hansl-Gretl-Language). It's recommended to get it from there.
+This plug-in is available on [package control](https://packagecontrol.io/packages/Hansl-gretl-Language). It's recommended to get it from there.
 
-Steps fpr installation:
+Steps for installation:
 
 1) Call "Package Control" via the key-bind
 	- Win/Linux: ```ctrl+shift+p```
 	- Mac: ```cmd+shift+p```
 
-2) Type "Package Control: Install Package" and search for "Hansl-Gretl-Language".
+2) Type "Package Control: Install Package" and search for "Hansl-gretl-Language".
 
 **Note:** If you don't see this plug-in in package control is likely because you have a too old version of Sublime installed. The plug-in will only be visible with a build >= 3084.
 
@@ -33,12 +33,12 @@ Steps fpr installation:
 Build 3084 of Sublime introduced a new format for syntax definition files.
 The documentation can be found [here](http://www.sublimetext.com/docs/3/syntax.html). This package makes use of this new syntax.
 
-Once the package is installed, every file with an ```*.inp``` file type will automatically be recognized as a Gretl file using the Hansl syntax. You should experience syntax-highlighting immediately. Otherwise, go through the menu: `View > Syntax > Hansl`.
+Once the package is installed, every file with an ```*.inp``` file type will automatically be recognized as a gretl file using the Hansl syntax. You should experience syntax-highlighting immediately. Otherwise, go through the menu: `View > Syntax > Hansl`.
 
-The new syntax will improve the way your Gretl/Hansl code is coloured:
+The new syntax will improve the way your gretl/Hansl code is coloured:
 ![alt text][sample]
 
-[sample]: https://raw.githubusercontent.com/atecon/Hansl-Gretl-Language/master/hansl_screenshot.png "Screen-shot of Hansl syntax"
+[sample]: https://raw.githubusercontent.com/atecon/Hansl-gretl-Language/master/hansl_screenshot.png "Screen-shot of Hansl syntax"
 
 **Note:** There are still some edgy cases left for improvement.
 
@@ -52,14 +52,14 @@ Snippets make you really productive! These are little templates which save typin
 
 Watch for a tutorial on snippets here: https://youtu.be/MeOaWR2T6TU
 
-### Gretl build-systems
-Support for build-systems is a great feature of the Sublime editor. They allow you to execute a program. I've added different build-system for Gretl such that you can run your Gretl script via the "gretlcli" program --- Gretl's command line program *instead* of the GUI.
+### gretl build-systems
+Support for build-systems is a great feature of the Sublime editor. They allow you to execute a program. I've added different build-system for gretl such that you can run your gretl script via the "gretlcli" program --- gretl's command line program *instead* of the GUI.
 
-Three build-systems are configured (see ./build-systems/Gretl.sublime-build):
+Three build-systems are configured (see ./build-systems/gretl.sublime-build):
 
-1) "CLI": Execute a Gretl script in a terminal -- non-interactive.
+1) "CLI": Execute a gretl script in a terminal -- non-interactive.
 
-2) "Batch mode": Execute a Gretl script and quit.
+2) "Batch mode": Execute a gretl script and quit.
 
 3) "REPL": Interactive mode opening a command line interface.
 
@@ -69,8 +69,12 @@ For a great video tutorial on how to make a build-system interactive with *Termi
 
 
 ## Changelog:
- v0.2.0 (November 2020):
- - Added new additional snippets
+v0.2.1 (May 2021):
+    - Added new snippets for loops
+    - Improve existing snippets (all backward compatible)
 
- v0.1.0 (May 2020):
- - Initial release
+v0.2.0 (November 2020):
+    - Added new additional snippets
+
+v0.1.0 (May 2020):
+    - Initial release

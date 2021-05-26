@@ -11,5 +11,5 @@ gnuplot ${1:columns} --matrix=${2:matrix} --with-lines --time-series \
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
 	<!-- Optional: Description to show in the menu -->
-    <description>gretl - plot - gnu-matrix</description>
+    <description>gretl - plot - matrix</description>
 </snippet>

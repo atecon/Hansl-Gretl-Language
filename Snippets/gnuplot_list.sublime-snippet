@@ -10,5 +10,5 @@ gnuplot ${1:data} --with-lines --time-series --output="${2:output} \
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<!-- <scope>source.python</scope> -->
 	<!-- Optional: Description to show in the menu -->
-    <description>gretl - plot - gnu-list</description>
+    <description>gretl - plot - list</description>
 </snippet>
