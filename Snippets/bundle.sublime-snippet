@@ -1,14 +1,12 @@
 <snippet>
 	<content><![CDATA[
-clear
-set verbose off
-open ${1:filename} ${2:options} --quiet --preserve
+bundle ${1:name} = _(${2:key} = ${3:value})
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>clear_open</tabTrigger>
+	<tabTrigger>bundle</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
+	<!--<scope>source.gretl</scope> -->
 	<!-- Optional: Description to show in the menu -->
-    <description>gretl - misc - open</description>
+    <description>gretl - create - bundle</description>
 </snippet>
