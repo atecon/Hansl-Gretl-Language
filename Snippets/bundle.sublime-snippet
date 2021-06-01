@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+bundle ${1:name} = _(${2:key} = ${3:value})
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bundle</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!--<scope>source.gretl</scope> -->
+	<!-- Optional: Description to show in the menu -->
+    <description>gretl - create - bundle</description>
+</snippet>
