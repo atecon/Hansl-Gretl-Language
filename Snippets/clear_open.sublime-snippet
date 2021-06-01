@@ -2,7 +2,7 @@
 	<content><![CDATA[
 clear
 set verbose off
-open ${filename} --quiet --preserve
+open ${1:filename} ${2:options} --quiet --preserve
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

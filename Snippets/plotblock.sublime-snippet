@@ -6,7 +6,7 @@ plot ${1:data}
        # literal set nokey
        # printf "set title \"%s\"", title
        # printf "set xlabel \"%s\"", xname
- end plot --output="${3:output}"
+end plot --output="${3:output}"
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>plotblock</tabTrigger>
