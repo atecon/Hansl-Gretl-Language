@@ -69,6 +69,10 @@ For a great video tutorial on how to make a build-system interactive with *Termi
 
 
 ## Changelog:
+v0.2.2 (June 2021):
+    - Add new snippets defining a bundle
+    - Minor improvements
+
 v0.2.1 (May 2021):
     - Added new snippets for loops
     - Improve existing snippets (all backward compatible)
