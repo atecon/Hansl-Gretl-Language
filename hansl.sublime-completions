@@ -149,44 +149,286 @@
                "xtabm",
 
                // Gretl accessors
-                "ahat",
-                "aic",
-                "bic",
-                "chisq",
-                "coeff",
-                "command",
-                "compan",
-                "datatype",
-                "depvar",
-                "diagpval",
-                "diagtest",
-                "dw",
-                "dwpval",
-                "ec",
-                "error",
-                "ess",
-                "evals",
-                "fcast",
-                "fcse",
-                "fevd",
-                "Fstat",
-                "gmmcrit",
-                "h",
-                "hausman",
-                "hqc",
-                "huge",
-                "jalpha",
-                "jbeta",
-                "jvbeta",
-                "lang",
-                "llt",
-                "lnl",
-                "macheps",
-                "mnlprobs",
-                "model",
-                "mprirank",
-                "mpisize",
-                "ncoeff",
+              {
+                     "trigger": "ahat",
+                     "annotation": "retrieve series of fixed/random-effects",
+                     "contents": "\\$ahat $0",
+                     "kind": "variable",
+                     "details": "scalar, See 'help $ahat'"
+              },
+              {
+                     "trigger": "aic",
+                     "annotation": "AIC value",
+                     "contents": "\\$aic $0",
+                     "kind": "variable",
+                     "details": "scalar, See 'help $aic'"
+              },
+              {
+                     "trigger": "bic",
+                     "annotation": "BIC value",
+                     "contents": "\\$bic $0",
+                     "kind": "variable",
+                     "details": "scalar, See 'help $bic'"
+              },
+              {
+                     "trigger": "chisq",
+                     "annotation": "chi-square statistic",
+                     "contents": "\\$chisq $0",
+                     "kind": "variable",
+                     "details": "scalar, See 'help $chisq'"
+              },
+              {
+                     "trigger": "coeff",
+                     "annotation": "coefficient matrix",
+                     "contents": "\\$coeff $0",
+                     "kind": "variable",
+                     "details": "matrix, See 'help $coeff'"
+              },
+              {
+                     "trigger": "command",
+                     "annotation": "cmd of last model estimated",
+                     "contents": "\\$command $0",
+                     "kind": "variable",
+                     "details": "str, See 'help $command'"
+              },
+              {
+                     "trigger": "compan",
+                     "annotation": "companian matrix",
+                     "contents": "\\$compan $0",
+                     "kind": "variable",
+                     "details": "matrix, See 'help $compan'"
+              },
+              {
+                     "trigger": "datatype",
+                     "annotation": "Datatype dataset",
+                     "contents": "\\$datatype $0",
+                     "kind": "variable",
+                     "details": "int, 1=cross-section, 2=time-series, 3=panel"
+              },
+              {
+                     "trigger": "depvar",
+                     "annotation": "Name of dependent var.",
+                     "contents": "\\$depvar $0",
+                     "kind": "variable",
+                     "details": "str, See 'help $depvar'"
+              },
+              {
+                     "trigger": "df",
+                     "annotation": "Degrees of freedom",
+                     "contents": "\\$df $0",
+                     "kind": "variable",
+                     "details": "int, See 'help $df'"
+              },
+              {
+                     "trigger": "diagpval",
+                     "annotation": "P-value associated $diagtest stats",
+                     "contents": "\\$diagpval $0",
+                     "kind": "variable",
+                     "details": "scalar, Must follow a system of eq."
+              },
+              {
+                     "trigger": "diagtest",
+                     "annotation": "Test stats for H0: cross-equation cov-mat matrix is diagonal",
+                     "contents": "\\$diagtest $0",
+                     "kind": "variable",
+                     "details": "scalar, Must follow a system of eq."
+              },
+              {
+                     "trigger": "dotdir",
+                     "annotation": "path where temporary files are stored",
+                     "contents": "\\$dotdir $0",
+                     "kind": "variable",
+                     "details": "str, See also 'set dotdir'"
+              },
+              {
+                     "trigger": "dw",
+                     "annotation": "Durbin–Watson statistic",
+                     "contents": "\\$dotdir $0",
+                     "kind": "variable",
+                     "details": "scalar, 1st serial correlation test stat."
+              },
+              {
+                     "trigger": "dwpval",
+                     "annotation": "P-value of Durbin–Watson statistic",
+                     "contents": "\\$dotdir $0",
+                     "kind": "variable",
+                     "details": "scalar, CDF of the DW distribution evaluated"
+              },
+              {
+                     "trigger": "ec",
+                     "annotation": "error correction terms of VECM",
+                     "contents": "\\$ec $0",
+                     "kind": "variable",
+                     "details": "matrix, rows = number of obs. used; columns = cointegration rank of the system"
+              },
+              {
+                     "trigger": "error",
+                     "annotation": "internal error code",
+                     "contents": "\\$error $0",
+                     "kind": "variable",
+                     "details": "int, Error trapped by 'catch' cmd"
+              },
+              {
+                     "trigger": "ess",
+                     "annotation": "error sum of squares",
+                     "contents": "\\$ess $0",
+                     "kind": "variable",
+                     "details": "scalar, See 'help ess'"
+              },
+              {
+                     "trigger": "evals",
+                     "annotation": "eigenvalues used for trace test for cointegration",
+                     "contents": "\\$evals $0",
+                     "kind": "variable",
+                     "details": "matrix, Must follow the estimation of a VECM"
+              },
+              {
+                     "trigger": "fcast",
+                     "annotation": "forecast values",
+                     "contents": "\\$fcast $0",
+                     "kind": "variable",
+                     "details": "matrix, Must follow the fcast cmd"
+              },
+              {
+                     "trigger": "fcse",
+                     "annotation": "std. errors of forecasts",
+                     "contents": "\\$fcse $0",
+                     "kind": "variable",
+                     "details": "matrix, Must follow the fcast cmd"
+              },
+              {
+                     "trigger": "fevd",
+                     "annotation": "forecast error variance decomp.",
+                     "contents": "\\$fevd $0",
+                     "kind": "variable",
+                     "details": "matrix, Must follow estimation of a VAR"
+              },
+              {
+                     "trigger": "Fstat",
+                     "annotation": "overall F-statistic",
+                     "contents": "\\$Fstat $0",
+                     "kind": "variable",
+                     "details": "scalar, from last model"
+              },
+              {
+                     "trigger": "gmmcrit",
+                     "annotation": "value of the GMM objective function",
+                     "contents": "\\$gmmcrit $0",
+                     "kind": "variable",
+                     "details": "scalar, Must follow a gmm block"
+              },
+              {
+                     "trigger": "h",
+                     "annotation": "estim. conditional variance",
+                     "contents": "\\$h $0",
+                     "kind": "variable",
+                     "details": "series, Must follow the garch cmd"
+              },
+              {
+                     "trigger": "hausman",
+                     "annotation": "estim. conditional variance",
+                     "contents": "\\$hausman $0",
+                     "kind": "variable",
+                     "details": "matrix, after tsls/ panel with random effects"
+              },
+              {
+                     "trigger": "hqc",
+                     "annotation": "HQC value",
+                     "contents": "\\$hqc $0",
+                     "kind": "variable",
+                     "details": "scalar, Hannan-Quinn Information Criterion"
+              },
+              {
+                     "trigger": "huge",
+                     "annotation": "very large positive number",
+                     "contents": "\\$huge $0",
+                     "kind": "variable",
+                     "details": "scalar, See also 'set' cmd"
+              },
+              {
+                     "trigger": "jalpha",
+                     "annotation": "loadings matrix (Johansen)",
+                     "contents": "\\$jalpha $0",
+                     "kind": "variable",
+                     "details": "matrix, Must follow a VECM estimation"
+              },
+              {
+                     "trigger": "jbeta",
+                     "annotation": "cointegration matrix (Johansen)",
+                     "contents": "\\$jbeta $0",
+                     "kind": "variable",
+                     "details": "matrix, Must follow a VECM estimation"
+              },
+              {
+                     "trigger": "jvbeta",
+                     "annotation": "covariance matrix (Johansen)",
+                     "contents": "\\$jvbeta $0",
+                     "kind": "variable",
+                     "details": "matrix, Must follow a VECM estimation"
+              },
+              {
+                     "trigger": "lang",
+                     "annotation": "national language in force",
+                     "contents": "\\$lang $0",
+                     "kind": "variable",
+                     "details": "string, 'help $lang'"
+              },
+              {
+                     "trigger": "llt",
+                     "annotation": "per-observation log-likelihood value",
+                     "contents": "\\$llt $0",
+                     "kind": "variable",
+                     "details": "series, 'help $llt'"
+              },
+              {
+                     "trigger": "lnl",
+                     "annotation": "log-likelihood last model",
+                     "contents": "\\$lnl $0",
+                     "kind": "variable",
+                     "details": "scalar, of last estimated model"
+              },
+              {
+                     "trigger": "macheps",
+                     "annotation": "machine epsilon",
+                     "contents": "\\$macheps $0",
+                     "kind": "variable",
+                     "details": "scalar, 'help $macheps'"
+              },
+              {
+                     "trigger": "mapfile",
+                     "annotation": "file containing the map polygons",
+                     "contents": "\\$mapfile $0",
+                     "kind": "variable",
+                     "details": "string, See 'help $mapfile'"
+              },
+              {
+                     "trigger": "mnlprobs",
+                     "annotation": "estimated probabilities of each outcome",
+                     "contents": "\\$mnlprobs $0",
+                     "kind": "variable",
+                     "details": "scalar, Only for multinomial logit model"
+              },
+              {
+                     "trigger": "model",
+                     "annotation": "model object",
+                     "contents": "\\$model $0",
+                     "kind": "variable",
+                     "details": "bundle, Only for single-equation model"
+              },
+              {
+                     "trigger": "mpirank",
+                     "annotation": "0-based rank or ID number of the current process",
+                     "contents": "\\$mpirank $0",
+                     "kind": "variable",
+                     "details": "int, only with MPI support"
+              },
+              {
+                     "trigger": "ncoeff",
+                     "annotation": "number of coefficients estimated",
+                     "contents": "\\$ncoeff $0",
+                     "kind": "variable",
+                     "details": "int, Value for last model estimated"
+              },
                 "nobs",
                 "now",
                 "nvars",
@@ -231,28 +473,145 @@
                 "ylist",
 
                 // data types and keywords
-                "bool",
-                "bundle",
-                "bundles",
-                "const",
-                "display",
-                "end",
-                "for",
-                "foreach",
-                "int",
-                "list",
-                "matrices",
-                "matrix",
-                "output",
-                "options",
-                "quiet",
-                "return",
-                "scalar",
-                "series",
-                "silent",
-                "string",
-                "strings",
-                "void",
-                "while"
+              {
+                     "trigger": "bool",
+                     "annotation": "Boolean",
+                     "kind": "type",
+                     //"details": "boolean datatype"
+              },
+              {
+                     "trigger": "bundle",
+                     "annotation": "Bundle",
+                     "kind": "type",
+                     "details": "See 'help defbundle'"
+              },
+              {
+                     "trigger": "bundles",
+                     "annotation": "Bundles",
+                     "kind": "type",
+                     "details": "See 'help array'"
+              },
+              {
+                     "trigger": "int",
+                     "annotation": "integer datatype",
+                     "kind": "type",
+                     "details": "See 'help function'"
+              },
+              {
+                     "trigger": "list",
+                     "annotation": "list of series",
+                     "kind": "type",
+                     "details": "See manual on lists"
+              },
+              {
+                     "trigger": "matrices",
+                     "annotation": "Array of numeric matrices",
+                     "kind": "type",
+                     "details": "See 'help array'"
+              },
+              {
+                     "trigger": "matrix",
+                     "annotation": "Matrix of numerics",
+                     "kind": "type",
+                     "details": "See 'help matrix'"
+              },
+              {
+                     "trigger": "scalar",
+                     "annotation": "Scalar object",
+                     "kind": "type",
+                     "details": "See 'help genr'"
+              },
+              {
+                     "trigger": "series",
+                     "annotation": "Series object",
+                     "kind": "type",
+                     "details": "See 'help genr'"
+              },
+              {
+                     "trigger": "string",
+                     "annotation": "String",
+                     "kind": "type",
+                     "details": "See manual on strings"
+              },
+              {
+                     "trigger": "strings",
+                     "annotation": "Array of string",
+                     "kind": "type",
+                     "details": "See manual on strings"
+              },
+
+              // Keywords
+              {
+                     "trigger": "const",
+                     "annotation": "const qualifier",
+                     "kind": "keyword",
+                     //"details": "const qualifier"
+              },
+              {
+                     "trigger": "display",
+                     "annotation": "show plot immediately",
+                     "kind": "keyword",
+                     //"details": "bundle datatype"
+              },
+              {
+                     "trigger": "void",
+                     "annotation": "Void qualifier",
+                     "kind": "keyword",
+                     "details": "No type/ value/ parameter"
+              },
+              {
+                     "trigger": "return",
+                     "annotation": "Return qualifier",
+                     "kind": "keyword",
+                     "details": "See 'help function'"
+              },
+
+              // Keywords for loops
+              {
+                     "trigger": "for",
+                     "annotation": "Type of loop",
+                     "kind": "keyword",
+                     "details": "See 'help loop'"
+              },
+              {
+                     "trigger": "foreach",
+                     "annotation": "Type of loop",
+                     "kind": "keyword",
+                     "details": "See 'help loop'"
+              },
+              {
+                     "trigger": "while",
+                     "annotation": "Type of loop",
+                     "kind": "keyword",
+                     "details": "See 'help loop'"
+              },
+
+              // Further keywords
+              {
+                     "trigger": "output",
+                     "annotation": "Option",
+                     "kind": "keyword",
+                     //"details": ""
+              },
+              {
+                     "trigger": "options",
+                     "annotation": "Arg. for plotting",
+                     "kind": "keyword",
+                     "details": "See 'help plot'"
+              },
+              {
+                     "trigger": "quiet",
+                     "annotation": "Reduce printout",
+                     "kind": "keyword",
+                     //"details": "See 'help plot'"
+              },
+              {
+                     "trigger": "silent",
+                     "annotation": "Don't print anything",
+                     "kind": "keyword",
+                     //"details": "See 'help plot'"
+              },
+
+
         ]
 }
