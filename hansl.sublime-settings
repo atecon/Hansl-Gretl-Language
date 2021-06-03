@@ -14,5 +14,8 @@
   	"translate_tabs_to_spaces": true,
 
   	//Standard gretl tab size
-  	"tab_size": 4
+  	"tab_size": 4,
+
+    "auto_indent": true,
+    "indent_to_bracket": false,
 }
