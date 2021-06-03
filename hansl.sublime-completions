@@ -429,48 +429,328 @@
                      "kind": "variable",
                      "details": "int, Value for last model estimated"
               },
-                "nobs",
-                "now",
-                "nvars",
-                "obsdate",
-                "obsmajor",
-                "obsmicro",
-                "obsmninor",
-                "parnames",
-                "pd",
-                "pi",
-                "qlrbreak",
-                "result",
-                "rho",
-                "rsq",
-                "sample",
-                "sargan",
-                "seed",
-                "sigma",
-                "stderr",
-                "stopwatch",
-                "sysA",
-                "sysB",
-                "sysGamma",
-                "sysinfo",
-                "system",
-                "T",
-                "t1",
-                "t2",
-                "test",
-                "tmax",
-                "trsq",
-                "uhat",
-                "unit",
-                "vcv",
-                "vecGamma",
-                "version",
-                "vma",
-                "windows",
-                "xlist",
-                "xtxinv",
-                "yhat",
-                "ylist",
+              {
+                     "trigger": "nobs",
+                     "annotation": "number of observations",
+                     "contents": "\\$nobs $0",
+                     "kind": "variable",
+                     "details": "int, returns N*T for a panel"
+              },
+              {
+                     "trigger": "now",
+                     "annotation": "Current time",
+                     "contents": "\\$now $0",
+                     "kind": "variable",
+                     "details": "matrix, see 'help $now'"
+              },
+              {
+                     "trigger": "nvars",
+                     "annotation": "number of series in the dataset",
+                     "contents": "\\$nvars $0",
+                     "kind": "variable",
+                     "details": "int, returns 0 if only constant exists"
+              },
+              {
+                     "trigger": "obsdate",
+                     "annotation": "date series (YYYYMMDD)",
+                     "contents": "\\$obsdate $0",
+                     "kind": "variable",
+                     "details": "series, ISO 8601 basic date format"
+              },
+              {
+                     "trigger": "obsmajor",
+                     "annotation": "low-frequency obs. component",
+                     "contents": "\\$obsmajor $0",
+                     "kind": "variable",
+                     "details": "series, year for annual/quarterly/monthly, day: hours"
+              },
+              {
+                     "trigger": "obsmicro",
+                     "annotation": "highest-frequency obs. component",
+                     "contents": "\\$obsmicro $0",
+                     "kind": "variable",
+                     "details": "series, see 'help $obsmicro'"
+              },
+              {
+                     "trigger": "obsminor",
+                     "annotation": "medium-frequency obs. component",
+                     "contents": "\\$obsminor $0",
+                     "kind": "variable",
+                     "details": "series, see 'help $obsminor'"
+              },
+              {
+                     "trigger": "parnames",
+                     "annotation": "names of the model's parameters",
+                     "contents": "\\$parnames $0",
+                     "kind": "variable",
+                     "details": "strings, see also varnames()"
+              },
+              {
+                     "trigger": "pd",
+                     "annotation": "frequency or periodicity of the data",
+                     "contents": "\\$pd $0",
+                     "kind": "variable",
+                     "details": "int, For panel data: time-series length"
+              },
+              {
+                     "trigger": "pi",
+                     "annotation": "value of pi in double precision",
+                     "contents": "\\$pi $0",
+                     "kind": "variable",
+                     "details": "scalar"
+              },
+              {
+                     "trigger": "pkgdir",
+                     "annotation": "full path of installed package",
+                     "contents": "\\$pkgdir $0",
+                     "kind": "variable",
+                     "details": "string, see 'help $pkgdir'"
+              },
+              {
+                     "trigger": "pvalue",
+                     "annotation": "p-value of the last hypothesis-test",
+                     "contents": "\\$pvalue $0",
+                     "kind": "variable",
+                     "details": "scalar or matrix, See 'help $pvalue'"
+              },
+              {
+                     "trigger": "qlrbreak",
+                     "annotation": "observation index of break point",
+                     "contents": "\\$qlrbreak $0",
+                     "kind": "variable",
+                     "details": "scalar, QLR break test 'help $qlrbreak'"
+              },
+              {
+                     "trigger": "result",
+                     "annotation": "Stored information of commands",
+                     "contents": "\\$result $0",
+                     "kind": "variable",
+                     "details": "bundle, see 'help $result'"
+              },
+              {
+                     "trigger": "rho",
+                     "annotation": "1st-order AR coefficient",
+                     "contents": "\\$rho $0",
+                     "kind": "variable",
+                     "details": "scalar"
+              },
+              {
+                     "trigger": "rsq",
+                     "annotation": "un-adjusted R2 last model",
+                     "contents": "\\$rsq $0",
+                     "kind": "variable",
+                     "details": "scalar"
+              },
+              {
+                     "trigger": "sample",
+                     "annotation": "Flag observations used in estimation",
+                     "contents": "\\$sample $0",
+                     "kind": "variable",
+                     "details": "series"
+              },
+              {
+                     "trigger": "saragan",
+                     "annotation": "Sargan test results",
+                     "contents": "\\$saragan $0",
+                     "kind": "variable",
+                     "details": "matrix, see 'help $sargan'"
+              },
+              {
+                     "trigger": "seed",
+                     "annotation": "Value of gretl's RNG",
+                     "contents": "\\$seed $0",
+                     "kind": "variable",
+                     "details": "int"
+              },
+              {
+                     "trigger": "sigma",
+                     "annotation": "Std. error or cross-eq. covar. matrix",
+                     "contents": "\\$sigma $0",
+                     "kind": "variable",
+                     "details": "scalar or matrix, see 'help $sigma'"
+              },
+              {
+                     "trigger": "stderr",
+                     "annotation": "Std. error of the coefficients",
+                     "contents": "\\$stderr $0",
+                     "kind": "variable",
+                     "details": "scalar or matrix, see 'help $stderr'"
+              },
+              {
+                     "trigger": "stopwatch",
+                     "annotation": "value of CPU time",
+                     "contents": "\\$stopwatch $0",
+                     "kind": "variable",
+                     "details": "scalar, see 'help $stopwatch'"
+              },
+              {
+                     "trigger": "sysA",
+                     "annotation": "coeff. lagged endogenous system variables",
+                     "contents": "\\$sysA $0",
+                     "kind": "variable",
+                     "details": "matrix, see 'help $sysA'"
+              },
+              {
+                     "trigger": "sysB",
+                     "annotation": "coeff. exogenous structural form",
+                     "contents": "\\$sysB $0",
+                     "kind": "variable",
+                     "details": "matrix, see 'help $sysB'"
+              },
+              {
+                     "trigger": "sysGamma",
+                     "annotation": "coeff. of contemporaneous endogenous",
+                     "contents": "\\$sysGamma $0",
+                     "kind": "variable",
+                     "details": "matrix, see 'help $sysGamma'"
+              },
+              {
+                     "trigger": "sysinfo",
+                     "annotation": "System information",
+                     "contents": "\\$sysinfo $0",
+                     "kind": "variable",
+                     "details": "bundle, see 'help $sysinfo'"
+              },
+              {
+                     "trigger": "system",
+                     "annotation": "Information on system estimation",
+                     "contents": "\\$system $0",
+                     "kind": "variable",
+                     "details": "bundle, see 'help $system'"
+              },
+              {
+                     "trigger": "T",
+                     "annotation": "number of obs. used for estimation",
+                     "contents": "\\$T $0",
+                     "kind": "variable",
+                     "details": "int, see 'help $T'"
+              },
+              {
+                     "trigger": "t1",
+                     "annotation": "index of the 1st obs. in selected sample",
+                     "contents": "\\$t1 $0",
+                     "kind": "variable",
+                     "details": "int, see 'help $t1'"
+              },
+              {
+                     "trigger": "t2",
+                     "annotation": "index of the last obs. in selected sample",
+                     "contents": "\\$t2 $0",
+                     "kind": "variable",
+                     "details": "int, see 'help $t2'"
+              },
+              {
+                     "trigger": "test",
+                     "annotation": "Test statistic",
+                     "contents": "\\$test $0",
+                     "kind": "variable",
+                     "details": "scalar, see 'help $test'"
+              },
+              {
+                     "trigger": "tmax",
+                     "annotation": "index for the end of the selected sample",
+                     "contents": "\\$tmax $0",
+                     "kind": "variable",
+                     "details": "int, see 'help $tmax'"
+              },
+              {
+                     "trigger": "trsq",
+                     "annotation": "sample size times R-squared",
+                     "contents": "\\$trsq $0",
+                     "kind": "variable",
+                     "details": "scalar"
+              },
+              {
+                     "trigger": "uhat",
+                     "annotation": "residuals from the last model",
+                     "contents": "\\$uhat $0",
+                     "kind": "variable",
+                     "details": "series, See 'help $uhat'"
+              },
+              {
+                     "trigger": "unit",
+                     "annotation": "Identifier for panel units",
+                     "contents": "\\$uhat $0",
+                     "kind": "variable",
+                     "details": "series, See 'help $unit'"
+              },
+              {
+                     "trigger": "vcv",
+                     "annotation": "covariance for coefficients",
+                     "contents": "\\$vcv $0",
+                     "kind": "variable",
+                     "details": "matrix, See 'help $vcv'"
+              },
+              {
+                     "trigger": "vcv",
+                     "annotation": "covariance for coefficients",
+                     "contents": "\\$vcv $0",
+                     "kind": "variable",
+                     "details": "matrix, See 'help $vcv'"
+              },
+              {
+                     "trigger": "vecGamma",
+                     "annotation": "VECM Gamma matrices",
+                     "contents": "\\$vecGamma $0",
+                     "kind": "variable",
+                     "details": "matrix, See 'help $vecGamma'"
+              },
+              {
+                     "trigger": "version",
+                     "annotation": "gretl program version",
+                     "contents": "\\$version $0",
+                     "kind": "variable",
+                     "details": "int, See 'help $version'"
+              },
+              {
+                     "trigger": "vma",
+                     "annotation": "VAR/ VECM VMA representation",
+                     "contents": "\\$vma $0",
+                     "kind": "variable",
+                     "details": "matrix, See 'help $vma'"
+              },
+              {
+                     "trigger": "windows",
+                     "annotation": "gretl runs on Windows",
+                     "contents": "\\$windows $0",
+                     "kind": "variable",
+                     "details": "bool, See 'help $windows'"
+              },
+              {
+                     "trigger": "workdir",
+                     "annotation": "Full path working directory",
+                     "contents": "\\$workdir $0",
+                     "kind": "variable",
+                     "details": "string, See 'help $workdir'"
+              },
+              {
+                     "trigger": "xlist",
+                     "annotation": "list of regressors of last model estimated",
+                     "contents": "\\$xlist $0",
+                     "kind": "variable",
+                     "details": "matrix, See 'help $xlist'"
+              },
+              {
+                     "trigger": "xtxinv",
+                     "annotation": "X'X^-1 for VAR or VECM",
+                     "contents": "\\$xtxinv $0",
+                     "kind": "variable",
+                     "details": "matrix, See 'help $xtxinv'"
+              },
+              {
+                     "trigger": "yhat",
+                     "annotation": "fitted values from last regression",
+                     "contents": "\\$yhat $0",
+                     "kind": "variable",
+                     "details": "series"
+              },
+              {
+                     "trigger": "ylist",
+                     "annotation": "list of endogenous for systems",
+                     "contents": "\\$ylist $0",
+                     "kind": "variable",
+                     "details": "series"
+              },
 
                 // data types and keywords
               {
