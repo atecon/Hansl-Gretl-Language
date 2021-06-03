@@ -238,7 +238,7 @@
                      "annotation": "path where temporary files are stored",
                      "contents": "\\$dotdir $0",
                      "kind": "variable",
-                     "details": "str, See also 'set dotdir'"
+                     "details": "str, Set it by 'set dotdir <PATH>'"
               },
               {
                      "trigger": "dw",
