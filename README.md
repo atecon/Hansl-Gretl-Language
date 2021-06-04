@@ -69,19 +69,19 @@ For a great video tutorial on how to make a build-system interactive with *Termi
 
 
 ## Changelog:
+v0.2.5 (June 2021):
+    - Add further completions for commands
+v0.2.4 (June 2021):
+    - Add further completions for commands
 v0.2.3 (June 2021):
     - Add much better support for completions for commands including type annotations, annotations and pre-configured options
-
 v0.2.2 (June 2021):
     - Add new snippets defining a bundle
     - Minor improvements
-
 v0.2.1 (May 2021):
     - Added new snippets for loops
     - Improve existing snippets (all backward compatible)
-
 v0.2.0 (November 2020):
     - Added new additional snippets
-
 v0.1.0 (May 2020):
     - Initial release
