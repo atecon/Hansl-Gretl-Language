@@ -940,7 +940,7 @@
                      "trigger": "bool",
                      "annotation": "Boolean",
                      "kind": "type",
-                     //"details": "boolean datatype"
+                     "details": "boolean datatype"
               },
               {
                      "trigger": "bundle",
