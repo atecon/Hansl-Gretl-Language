@@ -5,8 +5,188 @@
 
         "completions":
         [
-               "add",
-               "adf",
+              {
+                     "trigger": "add",
+                     "annotation": "Joint test for adding variables",
+                     "contents": "add ${1:varlist} $0",
+                     "kind": "snippet",
+                     "details": "Options: --lm, --quiet, --silent, --vcv, --both"
+              },
+              {
+                     "trigger": "adf",
+                     "annotation": "Dickey-Fuller test",
+                     "contents": "adf ${1:order} ${2:varlist} $0",
+                     "kind": "snippet",
+                     "details": "Options: --nc, --c, --ct, --ctt, --seasonals, --gls"
+              },
+              {
+                     "trigger": "anova",
+                     "annotation": "ANOVA analysis of variance",
+                     "contents": "anova ${1:response} ${2:treatment} ${3:[ block ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --quiet"
+              },
+              {
+                     "trigger": "append",
+                     "annotation": "Append data the current dataset",
+                     "contents": "append ${1:filename} $0",
+                     "kind": "snippet",
+                     "details": "Options: --time-series, --fixed-sample, --update-overlap, --quiet"
+              },
+              {
+                     "trigger": "ar",
+                     "annotation": "Cochrane-Orcutt dynamic model",
+                     "contents": "ar ${1:lags} ; ${2:depvar} ${3:indepvars} $0",
+                     "kind": "snippet",
+                     "details": "Options: --vcv, --quiet"
+              },
+              {
+                     "trigger": "ar1",
+                     "annotation": "FGLS estimates for an AR(1) model",
+                     "contents": "ar1 ${1:depvar} ${2:indepvars} $0",
+                     "kind": "snippet",
+                     "details": "Options: --hilu, --pwe, --vcv, --no-corc, --loose, --quiet"
+              },
+              {
+                     "trigger": "arbond",
+                     "annotation": "Arellano/ Bond (1991) GMM-DIF panel model",
+                     "contents": "arbond ${1:p} ${2:[ q ]} ; ${3:depvar} ${4:indepvars} ${5:[ ; instruments ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --vcv, --two-step, --time-dummies, --quiet, --asymptotic"
+              },
+              {
+                     "trigger": "arch",
+                     "annotation": "estimate ARCH model",
+                     "contents": "arch ${1:order} ${2:depvar} ${3:indepvars} $0",
+                     "kind": "snippet",
+                     "details": "Options: --quiet"
+              },
+              {
+                     "trigger": "arima",
+                     "annotation": "estimate ARIMA model",
+                     "contents": "arima ${1:p} ${2:d} ${3:q} ${4:[ ; P D Q ]} ; ${5:depvar} ${6:[ indepvars ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --verbose, --quiet, --vcv, --hessian, --opg, --nc, --conditional, --x-12-arima, --lbfgs, --y-diff-only"
+              },
+              {
+                     "trigger": "arma",
+                     "annotation": "estimate ARMA model",
+                     "contents": "arma ${1:p} ${2:d} ${3:q} ${4:[ ; P D Q ]} ; ${5:depvar} ${6:[ indepvars ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --verbose, --quiet, --vcv, --hessian, --opg, --nc, --conditional, --x-12-arima, --lbfgs, --y-diff-only"
+              },
+              {
+                     "trigger": "bds",
+                     "annotation": "BDS test for nonlinearity",
+                     "contents": "bds ${1:order} ${2:x} $0",
+                     "kind": "snippet",
+                     "details": "Options: --corr1, --sdcrit1, --boot=N, --matrix=m, --quiet"
+              },
+              {
+                     "trigger": "biprobit",
+                     "annotation": "Bi-variate probit model",
+                     "contents": "biprobit ${1:depvar1} ${2:depvar2} ${3:indepvars1} ${4:[ ; indepvars2 ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --vcv, --robust, --cluster=clustvar, --opg, --save-xbeta, --verbose"
+              },
+              {
+                     "trigger": "bkw",
+                     "annotation": "Collinearity test (Belsley, Kuh, Welsch)",
+                     "contents": "bkw $0",
+                     "kind": "snippet",
+                     "details": "Options: --quiet"
+              },
+              {
+                     "trigger": "boxplot",
+                     "annotation": "Boxplot",
+                     "contents": "boxplot ${1:varlist} $0",
+                     "kind": "snippet",
+                     "details": "Options: --notches, --factorized, --matrix=name, --output=filename, --panel"
+              },
+              {
+                     "trigger": "catch",
+                     "annotation": "Prefix to regular commands: trap errors",
+                     "contents": "catch ${1:command}$0",
+                     "kind": "snippet",
+                     "details": "Retrieve the error code by $error afterwards"
+              },
+              {
+                     "trigger": "chow",
+                     "annotation": "Structural break test at a given split point",
+                     "contents": "chow ${1:obs} $0",
+                     "kind": "snippet",
+                     "details": "Options: --dummy, --quiet, --limit-to-list=L"
+              },
+              {
+                     "trigger": "clear",
+                     "annotation": "Clear the current dataset etc. from memory",
+                     "contents": "clear$0",
+                     "kind": "snippet",
+                     "details": "Options: --dataset (clear dataset only), --functions (clear functions (only))"
+              },
+              {
+                     "trigger": "coeffsum",
+                     "annotation": "Sum of coefficients",
+                     "contents": "coeffsum ${1:varlist} $0",
+                     "kind": "snippet",
+                     "details": "Options: --quiet"
+              },
+              {
+                     "trigger": "coint",
+                     "annotation": "Engle–Granger (1987) cointegration test",
+                     "contents": "coint ${1:order} ${2:depvar} ${3:indepvars} $0",
+                     "kind": "snippet",
+                     "details": "Options: --nc, --ct --ctt, --seasonals, --skip-df, --test-down, --verbose, --silent"
+              },
+              {
+                     "trigger": "corr",
+                     "annotation": "Pairwise correlation coefficients (Pearson)",
+                     "contents": "corr ${1:[ varlist ]} ${2:--matrix=matname} $0",
+                     "kind": "snippet",
+                     "details": "Options: --uniform, --spearman --kendall, --verbose, --plot=mode-or-filename, --triangle"
+              },
+              {
+                     "trigger": "corrgm",
+                     "annotation": "(partial) autocorrelation function",
+                     "contents": "corrgm ${1:[ order ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --bartlett, --plot=mode-or-filename, --verbose"
+              },
+              {
+                     "trigger": "cusum",
+                     "annotation": "CUSUM stability test after ols",
+                     "contents": "cusum $0",
+                     "kind": "snippet",
+                     "details": "Options: --squares, --quiet, --plot=mode-or-filename"
+              },
+              {
+                     "trigger": "difftest",
+                     "annotation": "CUSUM stability test after ols",
+                     "contents": "cusum ${1:series1} ${2:series2} $0",
+                     "kind": "snippet",
+                     "details": "Options: --sign, --rank-sum, --signed-rank, --verbose, --quiet"
+              },
+              {
+                     "trigger": "hausman",
+                     "annotation": "Hausman test of pooled model vs. RE/FE",
+                     "contents": "hausman $0",
+                     "kind": "snippet",
+                     "details": "Options: --nerlove, --matrix_diff"
+              },
+              {
+                     "trigger": "johansen",
+                     "annotation": "Johansen test for cointegration",
+                     "contents": "johansen ${1:order} ${2:ylist} ${3:[ ; xlist ]} ${4:[ ; rxlist ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --nc, --rc, --uc, --crt, --ct, --seasonals, --asy, --quiet, --silent, --verbose"
+              },
+              {
+                     "trigger": "kpss",
+                     "annotation": "KPSS unit-root test",
+                     "contents": "kpss ${1:order} ${2:varlist} $0",
+                     "kind": "snippet",
+                     "details": "Options: --trend, --seasonals, --quiet, --verbose"
+              },
                "anova",
                "append",
                "ar",
@@ -16,15 +196,8 @@
                "arima",
                "arma",
                "biprobit",
-               "bkw",
                "boxplot",
-               "break",
-               "catch",
-               "chow",
                "clear",
-               "coeffsum",
-               "coint",
-               "coint2",
                "corr",
                "corrgm",
                "cusum",
@@ -57,7 +230,6 @@
                "gmm",
                "gnuplot",
                "graphpg",
-               "hausman",
                "heckit",
                "help",
                "hfplot",
@@ -67,9 +239,7 @@
                "include",
                "info",
                "intreg",
-               "johansen",
                "join",
-               "kpss",
                "labels",
                "lad",
                "lags",
@@ -867,6 +1037,11 @@
               },
 
               // Further keywords
+              {
+                     "trigger": "break",
+                     "annotation": "Break out of a loop",
+                     "kind": "keyword",
+              },
               {
                      "trigger": "output",
                      "annotation": "Option",
