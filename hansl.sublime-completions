@@ -206,6 +206,13 @@
                      "kind": "snippet",
                      "details": "Options: --trend, --seasonals, --quiet, --verbose"
               },
+              {
+                     "trigger": "ols",
+                     "annotation": "OLS estimation",
+                     "contents": "ols ${1:depvars} ${2:indepvars} $0",
+                     "kind": "snippet",
+                     "details": "Options: --vcv, --robust, --cluster=clustvar, --jackknife, --simple-print, --quiet, --anova, --no-df-corr"
+              },
 
               // TODO: Drop these later
                "data",
