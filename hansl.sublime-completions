@@ -179,11 +179,137 @@
                      "details": "Options: --squares, --quiet, --plot=mode-or-filename"
               },
               {
+                     "trigger": "data",
+                     "annotation": "Read variables from a database file",
+                     "contents": "data ${1:varlist} $0",
+                     "kind": "snippet",
+                     "details": "Options: --compact=method, --quiet, --name=identifier, --odbc, --no-align"
+              },
+              {
+                     "trigger": "dataset",
+                     "annotation": "Performs various operations on the data set",
+                     "contents": "dataset ${1:keyword} ${2:parameter} $0",
+                     "kind": "snippet",
+                     "details": "Options: --panel-time, see 'help dataset' for keywords"
+              },
+              {
+                     "trigger": "delete",
+                     "annotation": "All-purpose destructor",
+                     "contents": "delete ${1:varlist/-name/pkgname} $0",
+                     "kind": "snippet",
+                     "details": "Options: --type=type-name, --db, --force"
+              },
+              {
+                     "trigger": "diff",
+                     "annotation": "1st difference",
+                     "contents": "diff ${1:varlist} $0",
+                     "kind": "snippet",
+                     "details": "New variable has prefix 'd_'"
+              },
+              {
                      "trigger": "difftest",
                      "annotation": "CUSUM stability test after ols",
                      "contents": "difftest ${1:series1} ${2:series2} $0",
                      "kind": "snippet",
                      "details": "Options: --sign, --rank-sum, --signed-rank, --verbose, --quiet"
+              },
+              {
+                     "trigger": "discrete",
+                     "annotation": "Mark variables as being discrete",
+                     "contents": "discrete ${1:varlist} $0",
+                     "kind": "snippet",
+                     "details": "Options: --reverse"
+              },
+              {
+                     "trigger": "dpanel",
+                     "annotation": "Dynamic panel model; GMM-DIF or GMM-SYS",
+                     "contents": "dpanel ${1:p} ; ${2:depvar} ${3:indepvars} ${4:[ ; instruments ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --quiet, --vcv, --two-step, --system, --time-dummies, --dpdstyle, --asymptotic, --keep-extra"
+              },
+              {
+                     "trigger": "dummify",
+                     "annotation": "One-hot-encoding",
+                     "contents": "dummify ${1:varlist} $0",
+                     "kind": "snippet",
+                     "details": "Options: --drop-first, --drop-last"
+              },
+              {
+                     "trigger": "duration",
+                     "annotation": "Estimate a duration model",
+                     "contents": "duration ${1:depvar} ${2:indepvars} ${3:[ ; censvar ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --exponential, --loglogistic, --lognormal, --medians, --robust, --cluster=clustvar, --vcv, --verbose, --quiet"
+              },
+              {
+                     "trigger": "eqnprint",
+                     "annotation": "Prints model as LaTeX equation",
+                     "contents": "eqnprint $0",
+                     "kind": "snippet",
+                     "details": "Options: --complete. --output=filename"
+              },
+              {
+                     "trigger": "estimate",
+                     "annotation": "Specify an equation within systems",
+                     "contents": "equation ${1:[ systemname ]} ${2:[ estimator ]} $0",
+                     "kind": "snippet",
+                     "details": "See 'help system'"
+              },
+              {
+                     "trigger": "equation",
+                     "annotation": "Calls for estimation of a system of equations",
+                     "contents": "equation ${1:depvar} ${2:indepvars} $0",
+                     "kind": "snippet",
+                     "details": "Options: --no-df-corr, --geomean, --quiet, --verbose"
+              },
+              {
+                     "trigger": "eval",
+                     "annotation": "Evaluate expression & print its value",
+                     "contents": "eval ${1:expression} $0",
+                     "kind": "snippet",
+                     // "details": "Options: --no-df-corr, --geomean, --quiet, --verbose"
+              },
+              {
+                     "trigger": "fcast",
+                     "annotation": "Compute forecasts",
+                     "contents": "fcast ${1:[startobs endobs]} ${2:[vname]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --recursive, --dynamic, --static, --out-of-sample, --plot=filename, --no-stats, --stats-only"
+              },
+              {
+                     "trigger": "flush",
+                     "annotation": "Immediately print",
+                     "contents": "flush $0",
+                     "kind": "snippet",
+                     //"details": ""
+              },
+              {
+                     "trigger": "foreign",
+                     "annotation": "Special mode to execute another program",
+                     "contents": "foreign language=${1:language} $0",
+                     "kind": "snippet",
+                     "details": "Options: --send-data[=list], --quiet"
+              },
+              {
+                     "trigger": "fractint",
+                     "annotation": "Special mode to execute another program",
+                     "contents": "fractint ${1:series} ${2:[ order ]} $0",
+                     "kind": "snippet",
+                     "details": "Options: --gph, --all, --quiet"
+              },
+              {
+                     "trigger": "freq",
+                     "annotation": "Frequency distribution",
+                     "contents": "freq ${1:variable} $0",
+                     "kind": "snippet",
+                     "details": "Options: --nbins=n, --min=minval, --binwidth=width, --matrix=name, --plot=mode-or-filename, --normal, --gamma, --silent, --quiet"
+              },
+              {
+                     "trigger": "funcerr",
+                     "annotation": "Frequency distribution",
+                     "contents": "funcerr ${1:variable} $0",
+                     "kind": "snippet",
+                     "details": "Options: --nbins=n, --min=minval, --binwidth=width, --matrix=name, --plot=mode-or-filename, --normal, --gamma, --silent, --quiet"
               },
               {
                      "trigger": "hausman",
