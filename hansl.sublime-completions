@@ -1,10 +1,29 @@
 {
-        // https://sublimetextapi.readthedocs.io/en/latest/extensibility/completions.html
+        // https://www.sublimetext.com/docs/completions.html
 
         "scope": "source.hansl",
 
         "completions":
         [
+
+              // Functions
+              {
+                   "trigger": "abs",
+                   "annotation": "Absolute value of x",
+                   "contents": "abs(${1:scalar/series/matrix)}) $0\n",
+                   "kind": "function",
+                   "details": "return: same type as input "
+              },
+              {
+                   "trigger": "aggregate",
+                   "annotation": "Grouped statistics",
+                   "contents": "aggregate(${1:x(series/list))}, ${2:byvar(series/list))}, ${3:[funcname(string)]}) $0\n",
+                   "kind": "function",
+                   "details": "return: same type as input"
+              },
+
+
+              // Commands
               {
                      "trigger": "add",
                      "annotation": "Joint test for adding variables",
@@ -187,19 +206,8 @@
                      "kind": "snippet",
                      "details": "Options: --trend, --seasonals, --quiet, --verbose"
               },
-               "anova",
-               "append",
-               "ar",
-               "ar1",
-               "arbond",
-               "arch",
-               "arima",
-               "arma",
-               "biprobit",
-               "boxplot",
-               "clear",
-               "corr",
-               "corrgm",
+
+              // TODO: Drop these later
                "cusum",
                "data",
                "dataset",
