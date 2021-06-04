@@ -9,7 +9,7 @@ gnuplot ${1:columns} --matrix=${2:matrix} --with-lines --time-series \
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>gnuplot</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
+	<scope>source.hansl</scope>
 	<!-- Optional: Description to show in the menu -->
     <description>gretl - plot - matrix</description>
 </snippet>

@@ -181,7 +181,7 @@
               {
                      "trigger": "difftest",
                      "annotation": "CUSUM stability test after ols",
-                     "contents": "cusum ${1:series1} ${2:series2} $0",
+                     "contents": "difftest ${1:series1} ${2:series2} $0",
                      "kind": "snippet",
                      "details": "Options: --sign, --rank-sum, --signed-rank, --verbose, --quiet"
               },
@@ -208,13 +208,11 @@
               },
 
               // TODO: Drop these later
-               "cusum",
                "data",
                "dataset",
                "debug",
                "delete",
                "diff",
-               "difftest",
                "discrete",
                "dpanel",
                "dummify",

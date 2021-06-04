@@ -7,7 +7,7 @@ endloop
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>loop-while</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.gretl</scope> -->
+	<scope>source.hansl</scope>
 	<!-- Optional: Description to show in the menu -->
     <description>gretl - loop - while</description>
 </snippet>
