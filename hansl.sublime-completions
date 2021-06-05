@@ -28,387 +28,594 @@
                      "trigger": "add",
                      "annotation": "Joint test for adding variables",
                      "contents": "add ${1:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --lm, --quiet, --silent, --vcv, --both"
               },
               {
                      "trigger": "adf",
                      "annotation": "Dickey-Fuller test",
                      "contents": "adf ${1:order} ${2:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --nc, --c, --ct, --ctt, --seasonals, --gls"
               },
               {
                      "trigger": "anova",
                      "annotation": "ANOVA analysis of variance",
                      "contents": "anova ${1:response} ${2:treatment} ${3:[ block ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --quiet"
               },
               {
                      "trigger": "append",
                      "annotation": "Append data the current dataset",
                      "contents": "append ${1:filename} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --time-series, --fixed-sample, --update-overlap, --quiet"
               },
               {
                      "trigger": "ar",
                      "annotation": "Cochrane-Orcutt dynamic model",
                      "contents": "ar ${1:lags} ; ${2:depvar} ${3:indepvars} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --vcv, --quiet"
               },
               {
                      "trigger": "ar1",
                      "annotation": "FGLS estimates for an AR(1) model",
                      "contents": "ar1 ${1:depvar} ${2:indepvars} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --hilu, --pwe, --vcv, --no-corc, --loose, --quiet"
               },
               {
                      "trigger": "arbond",
                      "annotation": "Arellano/ Bond (1991) GMM-DIF panel model",
                      "contents": "arbond ${1:p} ${2:[ q ]} ; ${3:depvar} ${4:indepvars} ${5:[ ; instruments ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --vcv, --two-step, --time-dummies, --quiet, --asymptotic"
               },
               {
                      "trigger": "arch",
                      "annotation": "estimate ARCH model",
                      "contents": "arch ${1:order} ${2:depvar} ${3:indepvars} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --quiet"
               },
               {
                      "trigger": "arima",
                      "annotation": "estimate ARIMA model",
                      "contents": "arima ${1:p} ${2:d} ${3:q} ${4:[ ; P D Q ]} ; ${5:depvar} ${6:[ indepvars ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --verbose, --quiet, --vcv, --hessian, --opg, --nc, --conditional, --x-12-arima, --lbfgs, --y-diff-only"
               },
               {
                      "trigger": "arma",
                      "annotation": "estimate ARMA model",
                      "contents": "arma ${1:p} ${2:d} ${3:q} ${4:[ ; P D Q ]} ; ${5:depvar} ${6:[ indepvars ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --verbose, --quiet, --vcv, --hessian, --opg, --nc, --conditional, --x-12-arima, --lbfgs, --y-diff-only"
               },
               {
                      "trigger": "bds",
                      "annotation": "BDS test for nonlinearity",
                      "contents": "bds ${1:order} ${2:x} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --corr1, --sdcrit1, --boot=N, --matrix=m, --quiet"
               },
               {
                      "trigger": "biprobit",
                      "annotation": "Bi-variate probit model",
                      "contents": "biprobit ${1:depvar1} ${2:depvar2} ${3:indepvars1} ${4:[ ; indepvars2 ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --vcv, --robust, --cluster=clustvar, --opg, --save-xbeta, --verbose"
               },
               {
                      "trigger": "bkw",
                      "annotation": "Collinearity test (Belsley, Kuh, Welsch)",
                      "contents": "bkw $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --quiet"
               },
               {
                      "trigger": "boxplot",
                      "annotation": "Boxplot",
                      "contents": "boxplot ${1:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --notches, --factorized, --matrix=name, --output=filename, --panel"
               },
               {
                      "trigger": "catch",
                      "annotation": "Prefix to regular commands: trap errors",
                      "contents": "catch ${1:command}$0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Retrieve the error code by $error afterwards"
               },
               {
                      "trigger": "chow",
                      "annotation": "Structural break test at a given split point",
                      "contents": "chow ${1:obs} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --dummy, --quiet, --limit-to-list=L"
               },
               {
                      "trigger": "clear",
                      "annotation": "Clear the current dataset etc. from memory",
                      "contents": "clear$0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --dataset (clear dataset only), --functions (clear functions (only))"
               },
               {
                      "trigger": "coeffsum",
                      "annotation": "Sum of coefficients",
                      "contents": "coeffsum ${1:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --quiet"
               },
               {
                      "trigger": "coint",
                      "annotation": "Engle–Granger (1987) cointegration test",
                      "contents": "coint ${1:order} ${2:depvar} ${3:indepvars} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --nc, --ct --ctt, --seasonals, --skip-df, --test-down, --verbose, --silent"
               },
               {
                      "trigger": "corr",
                      "annotation": "Pairwise correlation coefficients (Pearson)",
                      "contents": "corr ${1:[ varlist ]} ${2:--matrix=matname} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --uniform, --spearman --kendall, --verbose, --plot=mode-or-filename, --triangle"
               },
               {
                      "trigger": "corrgm",
                      "annotation": "(partial) autocorrelation function",
                      "contents": "corrgm ${1:[ order ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --bartlett, --plot=mode-or-filename, --verbose"
               },
               {
                      "trigger": "cusum",
                      "annotation": "CUSUM stability test after ols",
                      "contents": "cusum $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --squares, --quiet, --plot=mode-or-filename"
               },
               {
                      "trigger": "data",
                      "annotation": "Read variables from a database file",
                      "contents": "data ${1:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --compact=method, --quiet, --name=identifier, --odbc, --no-align"
               },
               {
                      "trigger": "dataset",
                      "annotation": "Performs various operations on the data set",
                      "contents": "dataset ${1:keyword} ${2:parameter} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --panel-time, see 'help dataset' for keywords"
               },
               {
                      "trigger": "delete",
                      "annotation": "All-purpose destructor",
                      "contents": "delete ${1:varlist/-name/pkgname} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --type=type-name, --db, --force"
               },
               {
                      "trigger": "diff",
                      "annotation": "1st difference",
                      "contents": "diff ${1:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "New variable has prefix 'd_'"
               },
               {
                      "trigger": "difftest",
                      "annotation": "CUSUM stability test after ols",
                      "contents": "difftest ${1:series1} ${2:series2} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --sign, --rank-sum, --signed-rank, --verbose, --quiet"
               },
               {
                      "trigger": "discrete",
                      "annotation": "Mark variables as being discrete",
                      "contents": "discrete ${1:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --reverse"
               },
               {
                      "trigger": "dpanel",
                      "annotation": "Dynamic panel model; GMM-DIF or GMM-SYS",
                      "contents": "dpanel ${1:p} ; ${2:depvar} ${3:indepvars} ${4:[ ; instruments ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --quiet, --vcv, --two-step, --system, --time-dummies, --dpdstyle, --asymptotic, --keep-extra"
               },
               {
                      "trigger": "dummify",
                      "annotation": "One-hot-encoding",
                      "contents": "dummify ${1:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --drop-first, --drop-last"
               },
               {
                      "trigger": "duration",
                      "annotation": "Estimate a duration model",
                      "contents": "duration ${1:depvar} ${2:indepvars} ${3:[ ; censvar ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --exponential, --loglogistic, --lognormal, --medians, --robust, --cluster=clustvar, --vcv, --verbose, --quiet"
               },
               {
                      "trigger": "eqnprint",
                      "annotation": "Prints model as LaTeX equation",
                      "contents": "eqnprint $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --complete. --output=filename"
               },
               {
                      "trigger": "estimate",
                      "annotation": "Specify an equation within systems",
                      "contents": "equation ${1:[ systemname ]} ${2:[ estimator ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "See 'help system'"
               },
               {
                      "trigger": "equation",
                      "annotation": "Calls for estimation of a system of equations",
                      "contents": "equation ${1:depvar} ${2:indepvars} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --no-df-corr, --geomean, --quiet, --verbose"
               },
               {
                      "trigger": "eval",
                      "annotation": "Evaluate expression & print its value",
                      "contents": "eval ${1:expression} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      // "details": "Options: --no-df-corr, --geomean, --quiet, --verbose"
               },
               {
                      "trigger": "fcast",
                      "annotation": "Compute forecasts",
                      "contents": "fcast ${1:[startobs endobs]} ${2:[vname]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --recursive, --dynamic, --static, --out-of-sample, --plot=filename, --no-stats, --stats-only"
               },
               {
                      "trigger": "flush",
                      "annotation": "Immediately print",
                      "contents": "flush $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      //"details": ""
               },
               {
                      "trigger": "foreign",
                      "annotation": "Special mode to execute another program",
                      "contents": "foreign language=${1:language} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --send-data[=list], --quiet"
               },
               {
                      "trigger": "fractint",
                      "annotation": "Special mode to execute another program",
                      "contents": "fractint ${1:series} ${2:[ order ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --gph, --all, --quiet"
               },
               {
                      "trigger": "freq",
                      "annotation": "Frequency distribution",
                      "contents": "freq ${1:variable} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --nbins=n, --min=minval, --binwidth=width, --matrix=name, --plot=mode-or-filename, --normal, --gamma, --silent, --quiet"
               },
               {
                      "trigger": "funcerr",
                      "annotation": "Frequency distribution",
                      "contents": "funcerr ${1:variable} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --nbins=n, --min=minval, --binwidth=width, --matrix=name, --plot=mode-or-filename, --normal, --gamma, --silent, --quiet"
+              },
+              {
+                     "trigger": "garch",
+                     "annotation": "estimate GARCH model",
+                     "contents": "garch ${1:order} ${2:depvar} ${3:[ indepvars ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --robust, --vcv, --nc, --stdresid, --fcp, --arma-init, --verbose, --quiet"
+              },
+              {
+                     "trigger": "genr",
+                     "annotation": "",
+                     "contents": "genr ${1:newvar} = ${2:formula} $0",
+                     "kind": "namespace",
+                     //"details": "Options: "
+              },
+              {
+                     "trigger": "gnuplot",
+                     "annotation": "Plot",
+                     "contents": "gnuplot ${1:yvars} ${2:xvar} ${3:[ dumvar ] } $0",
+                     "kind": "namespace",
+                     "details": "Options: see 'help gnuplot'"
+              },
+              {
+                     "trigger": "graphpg",
+                     //"annotation": "",
+                     "contents": "graphpg $0",
+                     "kind": "namespace",
+                     "details": "Options: see 'help graphpg'"
               },
               {
                      "trigger": "hausman",
                      "annotation": "Hausman test of pooled model vs. RE/FE",
                      "contents": "hausman $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --nerlove, --matrix_diff"
+              },
+              {
+                     "trigger": "heckit",
+                     "annotation": "Heckman-type selection model",
+                     "contents": "heckit ${1:depvar} ${2:indepvars} ; ${3:selection equation} $0",
+                     "kind": "namespace",
+                     "details": "Options: --two-step, --vcv, --opg, --robust, --cluster=clustvar, --quiet, --verbose"
+              },
+              {
+                     "trigger": "help",
+                     "annotation": "Print the help",
+                     "contents": "help ${1:[ functions/ command/ function]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --func"
+              },
+              {
+                     "trigger": "hfplot",
+                     "annotation": "Plot high-frequency series, with other series",
+                     "contents": "hfplot ${1:hflist} ${2:[ ; lflist ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --with-lines, --time-series, --output=filename/mode"
+              },
+              {
+                     "trigger": "hsk",
+                     "annotation": "Heteroskedasticity robust OLS",
+                     "contents": "hsk ${1:depvar} ${2:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --no-squares, --vcv, --quiet"
+              },
+              {
+                     "trigger": "hurst",
+                     "annotation": "Calculate the Hurst exponent",
+                     "contents": "hurst ${1:series} $0",
+                     "kind": "namespace",
+                     "details": "Options: --plot=mode-or-filename"
+              },
+              {
+                     "trigger": "include",
+                     "annotation": "Read & execute inp-/gfn file",
+                     "contents": "include ${1:filename} $0",
+                     "kind": "namespace",
+                     "details": "Options: --force"
+              },
+              {
+                     "trigger": "info",
+                     "annotation": "Prints information stored with datafile",
+                     "contents": "info $0",
+                     "kind": "namespace",
+                     // "details": "Options: --force"
+              },
+              {
+                     "trigger": "intreg",
+                     "annotation": "Estimate an interval regression model",
+                     "contents": "intreg ${1:minvar} ${2:maxvar} ${3:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --robust, --opg, --cluster=clustvar, --quiet, --verbose"
               },
               {
                      "trigger": "johansen",
                      "annotation": "Johansen test for cointegration",
                      "contents": "johansen ${1:order} ${2:ylist} ${3:[ ; xlist ]} ${4:[ ; rxlist ]} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --nc, --rc, --uc, --crt, --ct, --seasonals, --asy, --quiet, --silent, --verbose"
+              },
+              {
+                     "trigger": "join",
+                     "annotation": "Import data",
+                     "contents": "join ${1:filename} ${2:varname} $0",
+                     "kind": "namespace",
+                     "details": "Options: --data=name, --filter=expression, --ikey=name(s), --okey=name(s), --aggr=method, --tkey=name, --verbose"
               },
               {
                      "trigger": "kpss",
                      "annotation": "KPSS unit-root test",
                      "contents": "kpss ${1:order} ${2:varlist} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --trend, --seasonals, --quiet, --verbose"
+              },
+              {
+                     "trigger": "lad",
+                     "annotation": "Median regression minimizing sum of abs. errors",
+                     "contents": "lad ${1:depvar} ${2:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --vcv, --no-vcv, --quiet"
+              },
+              {
+                     "trigger": "lags",
+                     "annotation": "Create new series with lagged values",
+                     "contents": "lags ${1:[ order ;]} ${2:varlist} $0",
+                     "kind": "namespace",
+                     "details": "Options: --bylag"
+              },
+              {
+                     "trigger": "ldiff",
+                     "annotation": "1st difference of the natural log",
+                     "contents": "ldiff ${1:varlist} $0",
+                     "kind": "namespace",
+                     //"details": "Options: --bylag"
+              },
+              {
+                     "trigger": "leverage",
+                     "annotation": "Compute leverage for each data point used by model",
+                     "contents": "leverage $0",
+                     "kind": "namespace",
+                     "details": "Options: --save, --overwrite, --plot=mode-or-filename, --quiet"
+              },
+              {
+                     "trigger": "levinlin",
+                     "annotation": "Panel unit-root test by Levin, Lin & Chu (2002)",
+                     "contents": "levinlin ${1:order} ${1:series} $0",
+                     "kind": "namespace",
+                     "details": "Options: --nc, --ct, --quiet, --verbose"
+              },
+              {
+                     "trigger": "logistic",
+                     "annotation": "Logistic regression (OLS on logistic transformation of the dependent variable)",
+                     "contents": "logistic ${1:depvar} ${1:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --nc, --ct, --quiet, --verbose"
+              },
+              {
+                     "trigger": "logit",
+                     "annotation": "Estimate logit model by Maximum-Likelihood",
+                     "contents": "logit ${1:depvar} ${1:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --robust, --cluster=clustvar, --multinomial, --vcv, --p-values, --estrella, --quiet, --verbose"
+              },
+              {
+                     "trigger": "logs",
+                     "annotation": "Create series of natural log; prefix: 'l//_'",
+                     "contents": "logs ${1:varlist} $0",
+                     "kind": "namespace",
+                     "details": "Options: --robust, --cluster=clustvar, --multinomial, --vcv, --p-values, --estrella, --quiet, --verbose"
+              },
+              {
+                     "trigger": "mahal",
+                     "annotation": "Mahalanobis distances between the series",
+                     "contents": "mahal ${1:varlist} $0",
+                     "kind": "namespace",
+                     "details": "Options: --save, --vcv, --quiet"
+              },
+              {
+                     "trigger": "makepkg",
+                     "annotation": "Create gretl function package via CLI",
+                     "contents": "makepkg ${1:filename} $0",
+                     "kind": "namespace",
+                     "details": "Options: --index, --translations, --quiet"
+              },
+              {
+                     "trigger": "markers",
+                     "annotation": "create or store observation markers",
+                     "contents": "markers ${1:filename} $0",
+                     "kind": "namespace",
+                     "details": "Options: --to-file=filename, --to-array=name, --from-file=filename, --delete"
+              },
+              {
+                     "trigger": "markers",
+                     "annotation": "create or store observation markers",
+                     "contents": "markers ${1:filename} $0",
+                     "kind": "namespace",
+                     "details": "Options: --to-file=filename, --to-array=name, --from-file=filename, --delete"
+              },
+              {
+                     "trigger": "meantest",
+                     "annotation": "Test for equal population means",
+                     "contents": "meantest ${1:series1} ${2:series2} $0",
+                     "kind": "namespace",
+                     "details": "Options: --unequal-vars"
+              },
+              {
+                     "trigger": "midasreg",
+                     "annotation": "Least-squares estimation of a MIDAS model.",
+                     "contents": "midasreg ${1:depvar} ${2:indepvars} ; ${3:MIDAS-terms} $0",
+                     "kind": "namespace",
+                     "details": "Options: --vcv, --robust, --quiet"
+              },
+              {
+                     "trigger": "midasreg",
+                     "annotation": "Least-squares estimation of a MIDAS model.",
+                     "contents": "midasreg ${1:depvar} ${2:indepvars} ; ${3:MIDAS-terms} $0",
+                     "kind": "namespace",
+                     "details": "Options: --vcv, --robust, --quiet"
+              },
+              {
+                     "trigger": "modeltab",
+                     "annotation": "Manipulates the gretl 'model table'",
+                     "contents": "modeltab ${1:add/show/free} $0",
+                     "kind": "namespace",
+                     "details": "Options: --output=filename"
+              },
+              {
+                     "trigger": "modprint",
+                     "annotation": "Print coefficient table & statistics 'by hand'",
+                     "contents": "modprint ${1:coeffmat} ${2:names} ${3:[ addstats ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --output=filename"
+              },
+              {
+                     "trigger": "modtest",
+                     "annotation": "Print coefficient table & statistics 'by hand'",
+                     "contents": "modtest ${1:[ order ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --normality, --autocorr, --white, --white-nocross, --breusch-pagan, --robust, --arch, --panel, --comfac, --xdepend, --logs, --squares, --quiet, --silent"
+              },
+              {
+                     "trigger": "mpols",
+                     "annotation": "OLS estimates using multiple precision floating-point arithmetic",
+                     "contents": "mpols ${1:depvar} ${2:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --vcv, --simple-print, --quiet"
+              },
+              {
+                     "trigger": "negbin",
+                     "annotation": "OLS estimates using multiple precision floating-point arithmetic",
+                     "contents": "negbin ${1:depvar} ${2:indepvars} ${3:[ ; offset ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --vcv, --model1, --robust, --cluster=clustvar, --opg, --verbose, --quiet"
+              },
+              {
+                     "trigger": "normtest",
+                     "annotation": "Perform test on normality",
+                     "contents": "normtest ${1:series} $0",
+                     "kind": "namespace",
+                     "details": "Options: --dhansen, --swilk, --lillie, --jbera, --all, --quiet"
+              },
+              {
+                     "trigger": "nulldata",
+                     "annotation": "Create a 'blank' data set",
+                     "contents": "nulldata ${1:series_length} $0",
+                     "kind": "namespace",
+                     "details": "Options: --preserve"
               },
               {
                      "trigger": "ols",
                      "annotation": "OLS estimation",
                      "contents": "ols ${1:depvars} ${2:indepvars} $0",
-                     "kind": "snippet",
+                     "kind": "namespace",
                      "details": "Options: --vcv, --robust, --cluster=clustvar, --jackknife, --simple-print, --quiet, --anova, --no-df-corr"
               },
+              {
+                     "trigger": "omit",
+                     "annotation": "Test omission of series from model OR G2S variable selection",
+                     "contents": "omit ${1:varlist} $0",
+                     "kind": "namespace",
+                     "details": "Options: --test-only, --chi-square, --auto[=alpha], --vcv, --quiet, --silent"
+              },
+              {
+                     "trigger": "open",
+                     "annotation": "Opens a data file or database",
+                     "contents": "open ${1:filename} $0",
+                     "kind": "namespace",
+                     "details": "Options: --select=selection, --frompkg=pkgname, --www, --odbc, --all-cols, --fixed_cols=IDs, --preserve, --quiet"
+              },
+              {
+                     "trigger": "orthdev",
+                     "annotation": "Create panel series of forward orthogonal deviations; prefix 'o_'",
+                     "contents": "orthdev ${1:varlist} $0",
+                     "kind": "namespace",
+                     //"details": "Options: "
+              },
+              {
+                     "trigger": "panel",
+                     "annotation": "Create panel series of forward orthogonal deviations; prefix 'o_'",
+                     "contents": "panel ${1:depvar} ${2:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --fixed-effects, --random-effects, --pooled, --between, --nerlove, --robust, --time-dummies, --unit-weights, --iterate, --matrix-diff, --unbalanced=method, --quiet, --verbose"
+              },
+
 
               // TODO: Drop these later
-               "data",
-               "dataset",
-               "debug",
-               "delete",
-               "diff",
-               "discrete",
-               "dpanel",
-               "dummify",
-               "duration",
-               "elif",
-               "else",
-               "endif",
-               "endloop",
-               "eqnprint",
-               "equation",
-               "estimate",
-               "eval",
-               "fcast",
-               "flush",
-               "foreign",
-               "fractint",
-               "freq",
-               "funcerr",
-               "garch",
-               "genr",
-               "gmm",
-               "gnuplot",
-               "graphpg",
-               "heckit",
-               "help",
-               "hfplot",
-               "hsk",
-               "hurst",
-               "if",
-               "include",
-               "info",
-               "intreg",
-               "join",
-               "labels",
-               "lad",
-               "lags",
-               "ldiff",
-               "leverage",
-               "levinlin",
-               "logistic",
-               "logit",
-               "logs",
-               "loop",
-               "mahal",
-               "makepkg",
-               "markers",
-               "meantest",
-               "midasreg",
-               "mle",
-               "modeltab",
-               "modprint",
-               "modtest",
-               "mpols",
-               "negbin",
-               "nls",
-               "normtest",
-               "nulldata",
-               "ols",
-               "omit",
-               "open",
-               "orthdev",
-               "outfile",
-               "panel",
+
                "panplot",
                "pca",
                "pergm",
@@ -456,6 +663,16 @@
                "wls",
                "xcorrgm",
                "xtabm",
+
+
+               {
+                     "trigger": "const",
+                     "annotation": "Constant",
+                     "contents": "const $0",
+                     "kind": "variable",
+                     "details": "series"
+              },
+
 
                // Gretl accessors
               {
@@ -1061,7 +1278,7 @@
                      "details": "series"
               },
 
-                // data types and keywords
+                // data types
               {
                      "trigger": "bool",
                      "annotation": "Boolean",
@@ -1137,6 +1354,12 @@
                      //"details": "const qualifier"
               },
               {
+                     "trigger": "debug",
+                     "annotation": "Debug mode",
+                     "kind": "keyword",
+                     "details": "See manual on debugging"
+              },
+              {
                      "trigger": "display",
                      "annotation": "show plot immediately",
                      "kind": "keyword",
@@ -1155,6 +1378,92 @@
                      "details": "See 'help function'"
               },
 
+              // Keywords of blocks
+              {
+                     "trigger": "function",
+                     "annotation": "Start function block",
+                     "contents": "function",
+                     "kind": "keyword",
+                     "details": "See 'help function'"
+              },
+              {
+                     "trigger": "end function",
+                     "annotation": "End function block",
+                     "contents": "end function",
+                     "kind": "keyword",
+                     "details": "See 'help function'"
+              },
+              {
+                     "trigger": "gmm",
+                     "annotation": "Start gmm block",
+                     "contents": "gmm",
+                     "kind": "keyword",
+                     "details": "See 'help gmm'"
+              },
+              {
+                     "trigger": "end gmm",
+                     "annotation": "End gmm block",
+                     "contents": "end gmm",
+                     "kind": "keyword",
+                     "details": "See 'help gmm'"
+              },
+              {
+                     "trigger": "mle",
+                     "annotation": "Start mle block",
+                     "contents": "mle",
+                     "kind": "keyword",
+                     "details": "See 'help mle'"
+              },
+              {
+                     "trigger": "end mle",
+                     "annotation": "End mle block",
+                     "contents": "end mle",
+                     "kind": "keyword",
+                     "details": "See 'help mle'"
+              },
+              {
+                     "trigger": "nls",
+                     "annotation": "Start nls block",
+                     "contents": "nls",
+                     "kind": "keyword",
+                     "details": "See 'help nls'"
+              },
+              {
+                     "trigger": "end nls",
+                     "annotation": "End nls block",
+                     "contents": "end nls",
+                     "kind": "keyword",
+                     "details": "See 'help nls'"
+              },
+              {
+                     "trigger": "plot",
+                     "annotation": "Start plot block",
+                     "contents": "plot",
+                     "kind": "keyword",
+                     "details": "See 'help plot'"
+              },
+              {
+                     "trigger": "end plot",
+                     "annotation": "End plot block",
+                     "contents": "end plot",
+                     "kind": "keyword",
+                     "details": "See 'help plot'"
+              },
+              {
+                     "trigger": "outfile",
+                     "annotation": "Start outfile block",
+                     "contents": "outfile",
+                     "kind": "keyword",
+                     "details": "See 'help outfile'"
+              },
+              {
+                     "trigger": "end outfile",
+                     "annotation": "End outfile block",
+                     "contents": "end outfile",
+                     "kind": "keyword",
+                     "details": "See 'help outfile'"
+              },
+
               // Keywords for loops
               {
                      "trigger": "for",
@@ -1171,6 +1480,12 @@
               {
                      "trigger": "while",
                      "annotation": "Type of loop",
+                     "kind": "keyword",
+                     "details": "See 'help loop'"
+              },
+              {
+                     "trigger": "endloop",
+                     "annotation": "End loop block",
                      "kind": "keyword",
                      "details": "See 'help loop'"
               },
@@ -1204,6 +1519,30 @@
                      "annotation": "Don't print anything",
                      "kind": "keyword",
                      //"details": "See 'help plot'"
+              },
+              {
+                     "trigger": "if",
+                     "annotation": "Start if-block",
+                     "kind": "keyword",
+                     "details": "See 'help if'"
+              },
+              {
+                     "trigger": "elif",
+                     //"annotation": "elif-block",
+                     "kind": "keyword",
+                     "details": "See 'help if'"
+              },
+              {
+                     "trigger": "else",
+                     //"annotation": "elif-block",
+                     "kind": "keyword",
+                     "details": "See 'help if'"
+              },
+              {
+                     "trigger": "endif",
+                     "annotation": "End if-block",
+                     "kind": "keyword",
+                     "details": "See 'help if'"
               },
 
 
