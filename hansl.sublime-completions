@@ -612,65 +612,348 @@
                      "kind": "namespace",
                      "details": "Options: --fixed-effects, --random-effects, --pooled, --between, --nerlove, --robust, --time-dummies, --unit-weights, --iterate, --matrix-diff, --unbalanced=method, --quiet, --verbose"
               },
-
-
-              // TODO: Drop these later
-
-               "panplot",
-               "pca",
-               "pergm",
-               "pkg",
-               "poisson",
-               "print",
-               "printf",
-               "probit",
-               "pvalue",
-               "qlrtest",
-               "qqplot",
-               "quantreg",
-               "quit",
-               "rename",
-               "reset",
-               "restrict",
-               "rmplot",
-               "run",
-               "runs",
-               "scatters",
-               "sdiff",
-               "set",
-               "setinfo",
-               "setmiss",
-               "setobs",
-               "setopt",
-               "shell",
-               "smpl",
-               "spearman",
-               "square",
-               "stdize",
-               "stop",
-               "store",
-               "summary",
-               "system",
-               "tabprint",
-               "textplot",
-               "tobit",
-               "tsls",
-               "var",
-               "varlist",
-               "vartest",
-               "vecm",
-               "vif",
-               "wls",
-               "xcorrgm",
-               "xtabm",
-
-
-               {
-                     "trigger": "const",
-                     "annotation": "Constant",
-                     "contents": "const $0",
-                     "kind": "variable",
-                     "details": "series"
+              {
+                     "trigger": "panplot",
+                     "annotation": "Plotting specific to panel data",
+                     "contents": "panel ${1:series} $0",
+                     "kind": "namespace",
+                     "details": "Options: --means, --overlay, --sequence, --grid, --stack, --boxplots, --boxplot, --output=filename"
+              },
+              {
+                     "trigger": "pca",
+                     "annotation": "Principal Components Analysis",
+                     "contents": "pca ${1:varlist} $0",
+                     "kind": "namespace",
+                     "details": "Options: --covariance, --save[=n], --save-all, --quiet"
+              },
+              {
+                     "trigger": "pergm",
+                     "annotation": "Computes & displays spectrum of series",
+                     "contents": "pergm ${1:series} ${2:[ bandwidth ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --bartlett, --log, --radians, --plot=mode-or-filename"
+              },
+              {
+                     "trigger": "pkg",
+                     "annotation": "Work with gretl function packages",
+                     "contents": "pkg ${1:install/query/unload/remove/index} ${2:pkgname} $0",
+                     "kind": "namespace",
+                     "details": "Options: --local, --verbose, --quiet"
+              },
+              {
+                     "trigger": "plot",
+                     "annotation": "Work with gretl function packages",
+                     "contents": "plot ${1:[ data ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --with-lines[=varspec], --with-lp[=varspec], --with-impulses[=varspec], --with-steps[=varspec], --time-series, --single-yaxis, --ylogscale[=base], --dummy, --fit=fitspec, --band=bandspec, --band-style=style, --output=filename"
+              },
+              {
+                     "trigger": "poisson",
+                     "annotation": "Work with gretl function packages",
+                     "contents": "pkg ${1:depvar} ${2:indepvars} ${3:[ ; offset ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --robust, --cluster=clustvar, --vcv, --verbose, --quiet"
+              },
+              {
+                     "trigger": "poisson",
+                     "annotation": "Work with gretl function packages",
+                     "contents": "pkg ${1:depvar} ${2:indepvars} ${3:[ ; offset ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --robust, --cluster=clustvar, --vcv, --verbose, --quiet"
+              },
+              {
+                     "trigger": "print",
+                     "annotation": "Work with gretl function packages",
+                     "contents": "print ${1:varlist/object-names/string-literal}$0",
+                     "kind": "namespace",
+                     "details": "Options: --byobs, --no-dates, --range=start:stop, --midas, --tree"
+              },
+              {
+                     "trigger": "printf",
+                     "annotation": "Print with format control",
+                     "contents": "printf ${1:format} ${2:, arguments} $0",
+                     "kind": "namespace",
+                     "details": "See 'help printf'"
+              },
+              {
+                     "trigger": "probit",
+                     "annotation": "Estimate probit model",
+                     "contents": "probit ${1:depvar} ${2:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --robust, --cluster=clustvar, --vcv, --p-values, --estrella, --random-effects, --quadpoints=k, --verbose, --quiet"
+              },
+              {
+                     "trigger": "pvalue",
+                     "annotation": "Area to the right of x in the specified distribution",
+                     "contents": "pvalue ${1:distribution} ${2:[ params ]} ${3: xvalue} $0",
+                     "kind": "namespace",
+                     "details": "See 'help pvalue'"
+              },
+              {
+                     "trigger": "pvalue",
+                     "annotation": "Area to the right of x in the specified distribution",
+                     "contents": "pvalue ${1:distribution} ${2:[ params ]} ${3: xvalue} $0",
+                     "kind": "namespace",
+                     "details": "See 'help pvalue'"
+              },
+              {
+                     "trigger": "qlrtest",
+                     "annotation": "Quandt likelihood ratio test (after OLS TS model)",
+                     "contents": "qlrtest $0",
+                     "kind": "namespace",
+                     "details": "Options: --limit-to=list, --plot=mode-or-filename, --quiet"
+              },
+              {
+                     "trigger": "qqplot",
+                     "annotation": "Quandt likelihood ratio test (after OLS TS model)",
+                     "contents": "qqplot ${1:series1} ${2:[ series2 ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --z-scores, --raw, --output=filename"
+              },
+              {
+                     "trigger": "quantreg",
+                     "annotation": "Quantile regression",
+                     "contents": "quantreg ${1:tau} ${2:depvar} ${3:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --robust, --intervals[=level], --vcv, --quiet"
+              },
+              {
+                     "trigger": "quit",
+                     "annotation": "Exits from gretl's current modality",
+                     "contents": "quit $0",
+                     "kind": "namespace",
+                     "details": "See 'help quit'"
+              },
+              {
+                     "trigger": "rename",
+                     "annotation": "Rename a series",
+                     "contents": "rename ${1:series-name} ${2:newname}  $0",
+                     "kind": "namespace",
+                     "details": "Options: --quiet"
+              },
+              {
+                     "trigger": "reset",
+                     "annotation": "Ramsey's RESET test after OLS regression",
+                     "contents": "reset $0",
+                     "kind": "namespace",
+                     "details": "Options: --squares-only, --cubes-only, --silent, --quiet"
+              },
+              {
+                     "trigger": "reset",
+                     "annotation": "Ramsey's RESET test after OLS regression",
+                     "contents": "reset $0",
+                     "kind": "namespace",
+                     "details": "Options: --squares-only, --cubes-only, --silent, --quiet"
+              },
+              {
+                     "trigger": "rmplot",
+                     "annotation": "Range–mean plot",
+                     "contents": "rmplot ${1:series} $0",
+                     "kind": "namespace",
+                     "details": "Options: --trim, --quiet, --output=filename"
+              },
+              {
+                     "trigger": "run",
+                     "annotation": "Executes the commands in filename then returns control to the interactive prompt",
+                     "contents": "run ${1:filename} $0",
+                     "kind": "namespace",
+                     //"details": "Options: --trim, --quiet, --output=filename"
+              },
+              {
+                     "trigger": "runs",
+                     "annotation": "Nonparametric 'runs' test for randomness",
+                     "contents": "runs ${1:series} $0",
+                     "kind": "namespace",
+                     "details": "Options: --difference, --equal"
+              },
+              {
+                     "trigger": "scatters",
+                     "annotation": "Pairwise graphs of yvar against all the variables in xvars, or vice versa",
+                     "contents": "scatters ${1:yvar} ${2: ; xvars/yvars} ${3: ; xvar} $0",
+                     "kind": "namespace",
+                     "details": "Options: --with-lines, --matrix=name, --output=filename/mode"
+              },
+              {
+                     "trigger": "sdiff",
+                     "annotation": "Create seasonal difference of each series; prefix 'sd_'",
+                     "contents": "sdiff ${1:varlist} $0",
+                     "kind": "namespace",
+                     //"details": "Options: --with-lines, --matrix=name, --output=filename/mode"
+              },
+              {
+                     "trigger": "set",
+                     "annotation": "Set global parameters",
+                     "contents": "set ${1:variable} ${2:value} $0",
+                     "kind": "namespace",
+                     "details": "See 'help set'"
+              },
+              {
+                     "trigger": "setinfo",
+                     "annotation": "Set meta-information for series",
+                     "contents": "setinfo ${1:series} $0",
+                     "kind": "namespace",
+                     "details": "Options: --description=string, --graph-name=string, --discrete, --continuous, --coded, --numeric, --midas"
+              },
+              {
+                     "trigger": "setmiss",
+                     "annotation": "Set value as a code for 'missing'",
+                     "contents": "setmiss ${1:value} ${2:[ varlist ]} $0",
+                     "kind": "namespace",
+                     //"details": "Options:"
+              },
+              {
+                     "trigger": "setobs",
+                     "annotation": "Specify structure of current dataset",
+                     "contents": "setobs ${1:periodicity/unitvar} ${2:startobs/timevar} ${3:/--panel-vars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --cross-section, --time-series, --special-time-series, --stacked-cross-section, --stacked-time-series, --panel-vars, --panel-time, --panel-groups"
+              },
+              {
+                     "trigger": "setopt",
+                     "annotation": "Pre-set options for a specified command.",
+                     "contents": "setopt ${1:command} ${2:[ action ]} ${3:options} $0",
+                     "kind": "namespace",
+                     "details": "See 'help setopt'"
+              },
+              {
+                     "trigger": "shell",
+                     "annotation": "Execute shell commands",
+                     "contents": "shell ${1:shellcommand} $0",
+                     "kind": "namespace",
+                     "details": "See 'help shell'"
+              },
+              {
+                     "trigger": "smpl",
+                     "annotation": "Manipulate the sample range",
+                     "contents": "smpl ${1:start} ${2:end} $0",
+                     "kind": "namespace",
+                     "details": "See 'help smpl'"
+              },
+              {
+                     "trigger": "spearman",
+                     "annotation": "Manipulate the sample range",
+                     "contents": "spearman ${1:series1} ${2:series2} $0",
+                     "kind": "namespace",
+                     "details": "Options: --verbose"
+              },
+              {
+                     "trigger": "square",
+                     "annotation": "Create squares (+cross-products) of series",
+                     "contents": "square ${1:varlist} $0",
+                     "kind": "namespace",
+                     "details": "prefix 'sq_'; Options: --cross"
+              },
+              {
+                     "trigger": "stdize",
+                     "annotation": "Create standardized series",
+                     "contents": "stdize ${1:varlist} $0",
+                     "kind": "namespace",
+                     "details": "prefix 's_' ('c_'); Options: --no-df-corr, --center-only"
+              },
+              {
+                     "trigger": "store",
+                     "annotation": "Create standardized series",
+                     "contents": "store ${1:filename} ${2:[ varlist ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --matrix=matrix-name, --gzipped[=level], --omit-obs, --compat etc."
+              },
+              {
+                     "trigger": "summary",
+                     "annotation": "Create standardized series",
+                     "contents": "summary ${1:[ varlist ] / --matrix=matname} $0",
+                     "kind": "namespace",
+                     "details": "Options: --simple, --weight=wvar, --by=byvar"
+              },
+              {
+                     "trigger": "summary",
+                     "annotation": "Create standardized series",
+                     "contents": "summary ${1:[ varlist ] / --matrix=matname} $0",
+                     "kind": "namespace",
+                     "details": "Options: --simple, --weight=wvar, --by=byvar"
+              },
+              {
+                     "trigger": "tabprint",
+                     "annotation": "Print the model in tabular form",
+                     "contents": "tabprint $0",
+                     "kind": "namespace",
+                     "details": "Options: --output=filename, --format='f1|f2|f3|f4', --complete"
+              },
+              {
+                     "trigger": "textplot",
+                     "annotation": "Quick and simple ASCII graphics",
+                     "contents": "textplot ${1:varlist} $0",
+                     "kind": "namespace",
+                     "details": "Options: --time-series, --one-scale, --tall"
+              },
+              {
+                     "trigger": "tobit",
+                     "annotation": "Quick and simple ASCII graphics",
+                     "contents": "tobit ${1:depvar} ${2:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --llimit=lval, --rlimit=rval, --vcv, --robust, --opg, --cluster=clustvar, --verbose, --quiet"
+              },
+              {
+                     "trigger": "tsls",
+                     "annotation": "Instrumental variables (IV) estimates",
+                     "contents": "tsls ${1:depvar} ${2:indepvars} ${3:; instruments} $0",
+                     "kind": "namespace",
+                     "details": "Options: --no-tests, --vcv, --robust, --no-df-corr, --cluster=clustvar, --liml, --gmm, --verbose, --quiet"
+              },
+              {
+                     "trigger": "var",
+                     "annotation": "VAR (using OLS) model estimation",
+                     "contents": "var ${1:ylist} ${2:xlist} ${3:[ ; xlist ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --nc, --trend, --seasonals, --robust, --robust-hac, --impulse-responses, --variance-decomp, --lagselect, --quiet, --silent"
+              },
+              {
+                     "trigger": "varlist",
+                     "annotation": "Print listing of the series (or any object) in memory",
+                     "contents": "varlist $0",
+                     "kind": "namespace",
+                     "details": "Options: --type=typename"
+              },
+              {
+                     "trigger": "vartest",
+                     "annotation": "Test the null hypothesis of equal population variances",
+                     "contents": "vartest ${1:series1} ${2:series2} $0",
+                     "kind": "namespace",
+                     //"details": "Options: --type=typename"
+              },
+              {
+                     "trigger": "vecm",
+                     "annotation": "Test the null hypothesis of equal population variances",
+                     "contents": "vecm ${1:order} ${2:rank} ${3:ylist} ${4:[ ; xlist ]} ${5:[ ; rxlist ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --nc, --rc, --uc, --crt, --ct, --seasonals, --impulse-responses, --variance-decomp, --quiet, --silent"
+              },
+              {
+                     "trigger": "vif",
+                     "annotation": "Collinearity diagnostics (after estimation)",
+                     "contents": "vif $0",
+                     "kind": "namespace",
+                     "details": "Options: --quiet"
+              },
+              {
+                     "trigger": "wls",
+                     "annotation": "Collinearity diagnostics (after estimation)",
+                     "contents": "wls ${1:wtvar} ${2:depvar} ${3:indepvars} $0",
+                     "kind": "namespace",
+                     "details": "Options: --vcv, --robust, --allow-zeros, --quiet"
+              },
+              {
+                     "trigger": "xcorrgm",
+                     "annotation": "Print & graph cross-correlogram",
+                     "contents": "xcorrgm ${1:series1} ${2:series2} ${3:[ order ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --plot=mode-or-filename, --quiet"
+              },
+              {
+                     "trigger": "xtab",
+                     "annotation": "Contingency table or cross-tabulation",
+                     "contents": "xtab ${1:ylist} ${2:[ ; xlist ]} $0",
+                     "kind": "namespace",
+                     "details": "Options: --row, --column, --zeros, --no-totals, --matrix=matname, --equal, --tex[=filename], --quiet"
               },
 
 
@@ -1366,6 +1649,12 @@
                      //"details": "bundle datatype"
               },
               {
+                     "trigger": "end",
+                     "annotation": "keyword for blocks",
+                     "kind": "keyword",
+                     //"details": "bundle datatype"
+              },
+              {
                      "trigger": "void",
                      "annotation": "Void qualifier",
                      "kind": "keyword",
@@ -1381,88 +1670,117 @@
               // Keywords of blocks
               {
                      "trigger": "function",
-                     "annotation": "Start function block",
-                     "contents": "function",
+                     "annotation": "Function block",
+                     "contents": "function $0\n\nend function",
                      "kind": "keyword",
                      "details": "See 'help function'"
               },
-              {
-                     "trigger": "end function",
-                     "annotation": "End function block",
-                     "contents": "end function",
-                     "kind": "keyword",
-                     "details": "See 'help function'"
-              },
+              // {
+              //        "trigger": "end function",
+              //        "annotation": "End function block",
+              //        "contents": "end function",
+              //        "kind": "keyword",
+              //        "details": "See 'help function'"
+              // },
               {
                      "trigger": "gmm",
-                     "annotation": "Start gmm block",
-                     "contents": "gmm",
+                     "annotation": "gmm block",
+                     "contents": "gmm $0\n\nend gmm",
                      "kind": "keyword",
                      "details": "See 'help gmm'"
               },
-              {
+              /*{
                      "trigger": "end gmm",
                      "annotation": "End gmm block",
                      "contents": "end gmm",
                      "kind": "keyword",
                      "details": "See 'help gmm'"
-              },
+              },*/
               {
                      "trigger": "mle",
-                     "annotation": "Start mle block",
-                     "contents": "mle",
+                     "annotation": "mle block",
+                     "contents": "mle $0\n\nend mle",
                      "kind": "keyword",
                      "details": "See 'help mle'"
               },
-              {
+              /*{
                      "trigger": "end mle",
                      "annotation": "End mle block",
                      "contents": "end mle",
                      "kind": "keyword",
                      "details": "See 'help mle'"
-              },
+              },*/
               {
                      "trigger": "nls",
-                     "annotation": "Start nls block",
-                     "contents": "nls",
+                     "annotation": "nls block",
+                     "contents": "nls $0\n\nend nls",
                      "kind": "keyword",
                      "details": "See 'help nls'"
               },
-              {
+              /*{
                      "trigger": "end nls",
                      "annotation": "End nls block",
                      "contents": "end nls",
                      "kind": "keyword",
                      "details": "See 'help nls'"
-              },
-              {
-                     "trigger": "plot",
-                     "annotation": "Start plot block",
-                     "contents": "plot",
-                     "kind": "keyword",
-                     "details": "See 'help plot'"
-              },
-              {
-                     "trigger": "end plot",
-                     "annotation": "End plot block",
-                     "contents": "end plot",
-                     "kind": "keyword",
-                     "details": "See 'help plot'"
-              },
+              },*/
               {
                      "trigger": "outfile",
-                     "annotation": "Start outfile block",
-                     "contents": "outfile",
+                     "annotation": "outfile block",
+                     "contents": "outfile $0\n\nend outfile",
                      "kind": "keyword",
                      "details": "See 'help outfile'"
               },
-              {
+              /*{
                      "trigger": "end outfile",
                      "annotation": "End outfile block",
                      "contents": "end outfile",
                      "kind": "keyword",
                      "details": "See 'help outfile'"
+              },*/
+              {
+                     "trigger": "plot",
+                     "annotation": "plot block",
+                     "contents": "plot $0\n\nend plot",
+                     "kind": "keyword",
+                     "details": "See 'help plot'"
               },
+              /*{
+                     "trigger": "end plot",
+                     "annotation": "End plot block",
+                     "contents": "end plot",
+                     "kind": "keyword",
+                     "details": "See 'help plot'"
+              },*/
+              {
+                     "trigger": "restrict",
+                     "annotation": "restrict block",
+                     "contents": "restrict $0\n\nend restrict",
+                     "kind": "keyword",
+                     "details": "See 'help restrict'"
+              },
+              /*{
+                     "trigger": "end restrict",
+                     "annotation": "End restrict block",
+                     "contents": "end restrict",
+                     "kind": "keyword",
+                     "details": "See 'help restrict'"
+              },*/
+              {
+                     "trigger": "system",
+                     "annotation": "system of equations block",
+                     "contents": "system $0\n\nend system",
+                     "kind": "keyword",
+                     "details": "See 'help system'"
+              },
+              /*{
+                     "trigger": "end system",
+                     "annotation": "End system of equations block",
+                     "contents": "end system",
+                     "kind": "keyword",
+                     "details": "See 'help system'"
+              },*/
+
 
               // Keywords for loops
               {
