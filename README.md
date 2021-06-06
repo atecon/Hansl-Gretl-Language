@@ -69,6 +69,9 @@ For a great video tutorial on how to make a build-system interactive with *Termi
 
 
 ## Changelog:
+v0.3.0 (June 2021):
+    - Finish completions for all gretl commands
+    - Add support for auto-indentation
 v0.2.5 (June 2021):
     - Add further completions for commands
 v0.2.4 (June 2021):
