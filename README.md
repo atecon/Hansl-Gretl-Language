@@ -38,7 +38,7 @@ Once the package is installed, every file with an ```*.inp``` file type will aut
 The new syntax will improve the way your gretl/Hansl code is coloured:
 ![alt text][sample]
 
-[sample]: https://raw.githubusercontent.com/atecon/Hansl-gretl-Language/master/figures/hansl_screenshot.png "Screenshot of hansl syntax"
+![Auto-indentation](<figures/hansl_screenshot.png>)
 
 **Note:** There are still some edgy cases left for improvement.
 
@@ -47,19 +47,51 @@ The new syntax will improve the way your gretl/Hansl code is coloured:
 This feature is automatically activated for every ```*.inp``` file. Start typing a gretl command, function name or name of an accessors and you will see  suggestions which can be accepted via the Tab key or Enter.
 
 
+### Completion of accessors
+The package treats gretl's built-in accessors as 'variables' (scope). Since Sublime 4, one can add annotations to variables.
+
+Here an example:
+![Completion of an accessor](<figures/completion_accessor.gif>)
+
+### Completion of commands
+The package treats gretl's built-in commands as 'namespace' (scope). Since Sublime 4, one can add annotations to commands, too.
+
+Here an example:
+![Completion of an accessor](<figures/completion_command.gif>)
+
+This is how it works for command blocks:
+![Completion of an accessor](<figures/completion_command_block.gif>)
+
+### Completion of data types
+Gretl data types are treated as 'type' (scope). Since Sublime 4, one can add annotations here, too.
+
+Here an example:
+![Completion of an accessor](<figures/completion_dtype.gif>)
+
+### Completion of keywords
+Gretl data types are treated as 'keyword' (scope). Since Sublime 4, one can add annotations here, too.
+
+Here an example:
+![Completion of an accessor](<figures/completion_keyword.gif>)
+
+
 ### Indentation
 Since version 0.3.0 auto-indentation is supported for gretl scripts.
 
+Here an example of an if-else block.
+
 ![Auto-indentation](<figures/indent_ifelse.gif>)
 
-
-
-**Note:** There are still some edgy cases left for improvement.
-
+However, indentation of nested blocks are not fully supported, yet.
 
 
 ### Snippets
 Snippets make you really productive! These are little templates which save typing. Simply open a gretl ```*.inp``` file, and start typing ```if```. You will see some suggestions which can be selected via the Tab key again. Explore and start writing your own snippets.
+
+This is how snippets work:
+
+![Snippet for creating a function block](<figures/snippet_function.gif>)
+
 
 For an overview of available snippets you can do the either:
 1. `Ctrl+Shift+P -> Snippet` will list the available snippets.
