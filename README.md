@@ -38,19 +38,36 @@ Once the package is installed, every file with an ```*.inp``` file type will aut
 The new syntax will improve the way your gretl/Hansl code is coloured:
 ![alt text][sample]
 
-[sample]: https://raw.githubusercontent.com/atecon/Hansl-gretl-Language/master/hansl_screenshot.png "Screen-shot of Hansl syntax"
+[sample]: https://raw.githubusercontent.com/atecon/Hansl-gretl-Language/master/figures/hansl_screenshot.png "Screenshot of hansl syntax"
 
 **Note:** There are still some edgy cases left for improvement.
 
 
 ### Completions
-This feature is automatically activated for every ```*.inp``` file. Start typing a gretl command, function name or name of an accessors and you will see some suggestions which can be accepted via the Tab key.
+This feature is automatically activated for every ```*.inp``` file. Start typing a gretl command, function name or name of an accessors and you will see  suggestions which can be accepted via the Tab key or Enter.
+
+
+### Indentation
+Since version 0.3.0 auto-indentation is supported for gretl scripts.
+
+![Auto-indentation](<figures/indent_ifelse.gif>)
+
+
+
+**Note:** There are still some edgy cases left for improvement.
+
 
 
 ### Snippets
 Snippets make you really productive! These are little templates which save typing. Simply open a gretl ```*.inp``` file, and start typing ```if```. You will see some suggestions which can be selected via the Tab key again. Explore and start writing your own snippets.
 
+For an overview of available snippets you can do the either:
+1. `Ctrl+Shift+P -> Snippet` will list the available snippets.
+2. See [here](https://github.com/atecon/Hansl-Gretl-Language/tree/master/Snippets) for all defined snippets (which you can use for your own templates).
+
+
 Watch for a tutorial on snippets here: https://youtu.be/MeOaWR2T6TU
+
 
 ### gretl build-systems
 Support for build-systems is a great feature of the Sublime editor. They allow you to execute a program. I've added different build-system for gretl such that you can run your gretl script via the "gretlcli" program --- gretl's command line program *instead* of the GUI.
