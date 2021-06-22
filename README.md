@@ -14,7 +14,7 @@ https://sourceforge.net/projects/gretl/files/manual/hansl-primer-a4.pdf/download
 
 
 ## I - Installation
-This plug-in is available on [package control](https://packagecontrol.io/packages/Hansl-gretl-Language). It's recommended to get it from there.
+This plug-in is available on [package control](https://packagecontrol.io/packages/Hansl-Gretl-Language). It's recommended to get it from there.
 
 Steps for installation:
 
