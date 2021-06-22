@@ -23,6 +23,7 @@ Steps for installation:
 	- Mac: ```cmd+shift+p```
 
 2) Type "Package Control: Install Package" and search for "Hansl-gretl-Language".
+3) Also install the package named `Terminus` (repeat steps 1 and 2) which is needed for the REPL mode.
 
 **Note:** If you don't see this plug-in in package control is likely because you have a too old version of Sublime installed. The plug-in will only be visible with a build >= 3084.
 
